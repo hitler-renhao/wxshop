@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的预约</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="format-detection" content="telephone=yes"/>
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/header.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/my_reservation.css" />
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js" ></script>
+	</head>
+	<style type="text/css">
+		.alerttt{
+			display: none;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.5);
+			position: fixed;
+			top: 0;
+			z-index: 999;
+		}
+		.aler{
+			position: fixed;
+			width: 70%;
+			height: 25%;
+			background: #fff;
+			top: 30%;
+			left: 15%;
+			border-radius: 1%;
+			border-top-left-radius: 5%;
+			border-top-right-radius: 5%;
+			overflow: hidden;
+			box-sizing: border-box;
+			/*border-top: .5rem solid #67a9fe;*/
+		}
+		.aler p{
+			width: 90%;
+			margin: auto;
+			font-size: .24rem;
+			line-height: .5rem;
+			text-indent:.24rem;	
+		}
+		.aler_head{
+			width: 100%;
+			background: #67a9fe;
+			height: 20%;
+			line-height: .6rem;
+			text-align: center;
+			color: #fff;
+		}
+		.bbtn{
+			width: 70%;
+			height: .8rem;
+			margin: auto;
+			position: fixed;
+			text-align: center;
+			top: 55.1%;
+			left: 15%;
+		}
+		.bbtn button{
+			border:.1rem solid #eee;
+			width: 49%;
+			height: .7rem;
+			background: #eee;
+		}
+	</style>
+	<body>
+		<div id="container">
+			<header>
+				<img class="back" src="http://wx.bjysjglasses.com/static/wxshop/images/head_jiantou.png" onClick="JavaScript :history.back(1);" />
+				<p class="title">我的预约</p>
+			</header>
+			<div id="model">
+				<div class="box">
+					<p class="sure">确认要取消该预约吗？</p>
+					<p class="yes">确认</p>
+					<p class="no">取消</p>
+				</div>
+			</div>
+			<div id="content"></div>
+			<div class="alerttt">
+				<div class="aler">
+					<div class="aler_head">
+						提示
+					</div>
+					<p style="margin-top: .1rem;">尊敬用户您好，在服务时间开始前1小时，您可免费取消订单。</p>
+					<p>
+						您的预约费用会在24小时内退回您的账户，服务时间开始1小时以内，扣除您预约费用的20%作为调度费。
+					</p>				
+				</div>
+				<p class="bbtn">
+					<button id="canl">取消</button>
+					<button id="sure" style="color:#fff;background: #67a9fe;border: .1rem solid #67a9fe;">确定</button>				
+				</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/my_reservation.js" ></script>		
+	</body>
+</html>

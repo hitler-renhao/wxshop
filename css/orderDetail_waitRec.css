@@ -1,0 +1,226 @@
+#count_down {
+	width: 100%;
+	height: 1.2rem;
+	background: #67a9fe;
+	font-size: 0.28rem;
+	color: #fff;
+	margin-top: 0.88rem;
+}
+#count_down .fl {
+	float: left;
+	height: 100%;
+	position: relative;
+}
+#count_down .fl img {
+	width: 0.41rem;
+	height: 0.35rem;
+	position: absolute;
+	left: 0.24rem;
+	top: 50%;
+	margin-top: -0.175rem;
+}
+#count_down .fl p {
+	line-height: 1.2rem;
+	margin-left: 0.8rem;
+}
+#count_down .fr {
+	float: right;
+	margin-right: 0.24rem;
+}
+#count_down .fr p {
+	line-height: 1.2rem;
+}
+#order_state {
+	width: 100%;
+	height: 1.2rem;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 0.14rem solid #f2f2f3;
+}
+#order_state .stateImg {
+	width: 0.41rem;
+	height: 0.35rem;
+	position: absolute;
+	left: 0.24rem;
+	top: 50%;
+	margin-top: -0.175rem;
+}
+#order_state .seeLog {
+	width: 0.14rem;
+	height: 0.24rem;
+	position: absolute;
+	right: 0.24rem;
+	top: 50%;
+	margin-top: -0.12rem;
+}
+#order_state p {
+	margin-left: 0.8rem;
+	font-size: 0.28rem;
+	color: #414141;
+	margin-top: 0.16rem;
+}
+#order_state p.time {
+	font-size: 0.2rem;
+	color: #727272;
+}
+#infor {
+	width: 100%;
+	height: 1.5rem;
+	border-bottom: 0.14rem solid #f2f2f3;
+	position: relative;
+	overflow: hidden;
+}
+#infor img {
+	width: 0.29rem;
+	height: 0.35rem;
+	position: absolute;
+	top: 50%;
+	left: 0.24rem;
+	margin-top: -0.175rem;
+}
+#infor .name {
+	margin-left: 0.8rem;
+	margin-top: 0.28rem;
+	height: 0.3rem;
+}
+#infor .name p {
+	font-size: 0.28rem;
+	color: #414141;
+	float: left;
+	line-height: 0.28rem;
+	margin-right: 0.9rem;
+}
+#infor .address {
+	width: 6.1rem;
+	margin-left: 0.8rem;
+	font-size: 0.2rem;
+	color: #727272;
+	line-height: 0.24rem;
+	margin-top: 0.15rem;
+}
+#goods_infor {
+	border-bottom: 0.14rem solid #f2f2f3;
+}
+#goods_infor h2 {
+	width: 7.26rem;
+	height: 0.88rem;
+	padding-left: 0.24rem;
+	font-size: 0.28rem;
+	color: #414141;
+	line-height: 0.88rem;
+}
+#goods_infor li {
+	width: 7.26rem;
+	height: 1.35rem;
+	padding-left: 0.24rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	border-top: 1px solid #e4e4e4;
+	position: relative;
+}
+#goods_infor li .goodsImg {
+	float: left;
+	width: 1.82rem;
+	height: 1.30rem;
+	border: 1px solid #d6d6d6;
+}
+#goods_infor li .goodsImg img {
+	width: 100%;
+	height: 100%;
+}
+#goods_infor li .infor {
+	width: 4.9rem;
+	height: 100%;
+	float: left;
+	margin-left: 0.2rem;
+	position: relative;
+}
+.infor .name {
+	font-size: 0.24rem;
+	color: #333;
+	margin-top: 0.1rem;
+	width: 100%;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.infor .color {
+	font-size: 0.24rem;
+	color: #727272;
+	line-height: 0.24rem;
+	margin: 0.14rem 0;
+}
+.infor .price {
+	font-size: 0.24rem;
+	color: #ff0000;
+}
+.infor .num {
+	font-size: 0.24rem;
+	color: #414141;
+	position: absolute;
+	right: 0;
+	top: 0.12rem;
+}
+#order_infor {
+	padding-bottom: 1.7rem;
+}
+#order_infor .head {
+	width: 7.26rem;
+	height: 0.86rem;
+	padding-left: 0.24rem;
+	border-bottom: 1px solid #e4e4e4;
+}
+#order_infor .head p {
+	font-size: 0.28rem;
+	color: #414141;
+	line-height: 0.86rem;
+}
+#order_infor .total {
+	width: 7.26rem;
+	height: 1.08rem;
+	padding-left: 0.24rem;
+	border-bottom: 0.14rem solid #f2f2f3;
+	overflow: hidden;
+}
+#order_infor .total p {
+	font-size: 0.24rem;
+	color: #727272;
+	line-height: 0.28rem;
+	margin: 0.18rem auto;
+}
+#order_infor .orderNum {
+	width: 7.26rem;
+	padding-left: 0.24rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	overflow: hidden;
+	font-size: 0.24rem;
+	color: #414141;
+	line-height: 0.28rem;
+}
+#order_infor .orderNum p {
+	line-height: 0.46rem;
+}
+#price {
+	width: 7.26rem;
+	height: 0.88rem;
+	padding-left: 0.24rem;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	z-index: 999;
+	border-top: 1px solid #e4e4e4;
+}
+#price .btn {
+	float: right;
+	width: 1.18rem;
+	height: 0.48rem;
+	border: 1px solid #d4d4d4;
+	text-align: center;
+	line-height: 0.5rem;
+	font-size: 0.24rem;
+	color: #727272;
+	margin-top: 0.18rem;
+	border-radius: 0.1rem;
+	margin-right: 0.24rem;
+}

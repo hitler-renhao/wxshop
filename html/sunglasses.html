@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>太阳镜</title>
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css">	
+	<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/Picture_frame_screen.css" />
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="toptop">
+			<div class="topbox">
+				<header class="flex">
+					<a href="javascript:;"><img class="back" src="http://wx.bjysjglasses.com/static/wxshop/images/jt_zuo.png" onClick="JavaScript :history.back(1);"></a>
+					<p class="head_name">太阳镜</p>
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/car_a.png" class="head_car" onclick="window.location.href='car.html'"/>
+				</header>
+				<!--按钮-->
+				<ul class="content_top" id="btn">
+					<li class="active" id="popularBtn">
+						<p>人气排行</p>
+					</li>
+					<li id="priceRank">
+						<p>价格排行</p>
+						<i class="up"></i>
+						<i class="down"></i>
+					</li>
+					<li id="shaiXuan">
+						<p>筛选商品</p>
+					</li>					
+				</ul>
+				<div></div>
+			</div>
+		</div>		
+		<!--太阳镜内容-->
+		<div id="wrapper">
+	        <div id="scroller">
+	            <ul class="goods_list flex" id="popular">
+					
+				</ul>
+				<ul class="goods_list1 flex" id="popular">
+					
+				</ul>
+	            <div class="pull-loading">上拉加载</div>
+	        </div>
+	    </div>
+	    <!-- 筛选弹框 -->
+	    <div id="screen_list">
+			<div class="items">
+				<h2>价格</h2>
+				<ul class="flex" id="jiaGe">
+					<li>199-399</li>
+					<li>399-699</li>
+					<li>699-999</li>
+					<li>999-1299</li>
+					<li>1300-10000</li>
+				</ul>
+			</div>
+			<div class="items">
+				<h2>边框</h2>
+				<ul class="flex" id="bianKuang">
+					<li>全框</li>
+					<li>半框</li>
+				</ul>
+			</div>
+			<div class="items">
+				<h2>材料</h2>
+				<ul class="flex" id="caiLiao">
+					<li>金属</li>
+				</ul>
+			</div>
+			<div class="items">
+				<h2>品牌</h2>
+				<ul class="flex" id="pinPai">
+					<li>帕莎</li>
+					<li>古狮</li>
+				</ul>
+			</div>	
+			<div class="items">
+				<h2>功能</h2>
+				<ul class="flex" id="gn">
+					<li>全面</li>					
+				</ul>
+			</div>
+			<!-- btn -->
+			<div class="button_box">
+				<button>重置</button>
+				<button>确定</button>
+			</div>		
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/iscroll.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/sunglasses.js"></script>
+	<!--<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/aaaa.js" ></script>-->
+	<script type="text/javascript">
+		var btn = document.getElementById('btn');
+		var aLi = btn.getElementsByTagName('li');
+		for(var i = 0;i<aLi.length;i++){
+			aLi[i].index = i;
+			aLi[i].onclick = function(){
+				for(var i = 0;i<aLi.length;i++){
+					aLi[i].className = '';
+				}
+				this.className = 'active';
+			}				
+		}
+	</script>
+</body>
+</html>

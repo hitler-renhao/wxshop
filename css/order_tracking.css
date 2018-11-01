@@ -1,0 +1,81 @@
+#express {
+	width: 100%;
+	height: 2rem;
+	margin-top: 0.88rem;
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 0.14rem solid #f2f2f3;
+	position: relative;
+}
+#express .logo {
+	width: 2.76rem;
+	height: 1.41rem;
+	position: absolute;
+	left: 0.45rem;
+	top: 50%;
+	margin-top: -0.705rem;
+}
+#express p {
+	font-size: 0.24rem;
+	color: #414141;
+	margin-left: 3.28rem;
+	line-height: 0.24rem;
+}
+#express p:nth-child(2) {
+	margin-top: 0.42rem;
+}
+#express p:nth-child(3) {
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+}
+#logisticsDetails h2 {
+	width: 7.26rem;
+	height: 0.88rem;
+	padding-left: 0.24rem;
+	line-height: 0.88rem;
+	font-size: 0.28rem;
+	color: #414141;
+	border-bottom: 1px solid #e4e4e4;
+}
+#logisticsDetails .con {
+	width: 6.3rem;
+	padding: 0 0 1.2rem 1.2rem; 
+}
+#logisticsDetails .con li {
+	margin-top: 0.38rem;
+	position: relative;
+	height:1.1rem;
+}
+#logisticsDetails .con li .cir {
+	width: 0.24rem;
+	height: 0.24rem;
+	position: absolute;
+	top: 0;
+	left: -0.6rem;
+}
+#logisticsDetails .con li i {
+	width: 0;
+	height: 1rem;
+	border-left: 1px solid #e4e4e4;
+	position: absolute;
+	top: 0.24rem;
+	left: -0.5rem;
+	height:1.3rem;
+}
+#logisticsDetails .con li .text {
+	width: 5.8rem;
+	font-size: 0.24rem;
+	line-height: 0.34rem;
+	color: #727272;
+	/*overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;*/
+}
+#logisticsDetails .con li .time {
+	font-size: 0.2rem;
+	color: #b4b4b4;
+	margin-top: 0.26rem;
+}
+#logisticsDetails .con li:last-child i {
+	height: 0;
+	border: 0;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加验光单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/header.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/optometryAdd.css" />
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<header style="border-bottom:1px solid #e4e4e4;">
+				<img class="back" src="http://wx.bjysjglasses.com/static/wxshop/images/jt_zuo.png" onClick="JavaScript :history.back(-1);">
+				<p class="title">添加验光单</p>
+			</header>
+			<div class="bigbox">
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/error.png" class="error" />
+				<p class="write">请正确填写</p>
+			</div>
+			<section class="section">
+            <div class="tables">
+                <table border="1" class="first_table">
+                    <tr>
+                        <th></th>
+                        <th>球镜</th>
+                        <th>柱镜</th>
+                        <th>轴位</th>
+                    </tr>
+                    <tr>
+                        <td>右眼(R)</td>
+                        <td><input type="text" value="" id="rp1RightQiujing"></td>
+                        <td><input type="text" value="" id="rp1RightZhujing"></td>
+                        <td><input type="text" value="" id="rp1RightZhouwei"></td>
+                    </tr>
+                    <tr>
+                        <td>左眼(L)</td>
+                        <td><input type="text" value="" id="rp1LeftQiujing"></td>
+                        <td><input type="text" value="" id="rp1LeftZhujing"></td>
+                        <td><input type="text" value="" id="rp1LeftZhouwei"></td>
+                    </tr>
+                </table>
+                <div class="center">
+                    <table border="1">
+                        <tr>
+                            <th></th>
+                            <th>瞳距</th>
+                        </tr>
+                        <tr>
+                            <td>右眼(R)</td>
+                            <td><input type="text" value="" id="rp1RightTongju"></td>
+                        </tr>
+                        <tr>
+                            <td>左眼(L)</td>
+                            <td><input type="text" value="" id="rp1LeftTongju"></td>
+                        </tr>
+                    </table>
+                    <table border="1">
+                        <tr>
+                            <th></th>
+                            <th>瞳高</th>
+                        </tr>
+                        <tr>
+                            <td>右眼(R)</td>
+                            <td><input type="text" value="" id="rp1RightTonggao"></td>
+                        </tr>
+                        <tr>
+                            <td>左眼(L)</td>
+                            <td><input type="text" value="" id="rp1LeftTonggao"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="last">
+                    <table border="1">
+                        <tr>
+                            <th></th>
+                            <th colspan="3">矫正视力</th>
+                        </tr>
+                        <tr class="trs">
+                            <td>右眼(R)</td>
+                            <td><input type="text" value="" id="rp1RightJiaozhengshili"></td>
+                            <td rowspan="2">双眼(E)</td>
+                            <td rowspan="2"><input type="text" value="" id="rp1Jiaozhengshili"></td>
+                        </tr>
+                        <tr>
+                            <td>左眼(L)</td>
+                            <td><input type="text" value="" id="rp1LeftJiaozhengshili"></td>
+                        </tr>
+                    </table>
+                    <table border="1">
+                        <tr>
+                            <th></th>
+                            <th colspan="3">ADD</th>
+                        </tr>
+                        <tr class="trs">
+                            <td>右眼(R)</td>
+                            <td><input type="text" value="" id="rp1RightAdd"></td>                           
+                        </tr>
+                        <tr>
+                            <td>左眼(L)</td>
+                            <td><input type="text" value="" id="rp1LeftAdd"></td>
+                        </tr>
+                    </table>
+                    <!--<p><label>ADD</label>
+                    	<label>左眼</label><input type="text" value="" style="width:60%;"></p>-->
+                </div>
+            </div>
+            <button class="add_box">保存</button>
+        </section>
+			
+			
+			<!--<ul class="list">
+				<li>
+					<label>姓名</label>
+					<input type="text" placeholder="请输入你的姓名" id="userName" />
+				</li>
+				<li class="active">
+					<label class="label">度数（SPH）</label>
+					<div class="degrees">
+						<span>
+							<label class="label_two">左眼</label>
+							<input type="text" placeholder="请输入左眼度数" class="ipt" id="leftsph"/>
+						</span>
+						<span class="number">
+							<label class="label_two">右眼</label>
+							<input type="text" placeholder="请输入右眼度数" class="ipt"  id="rightsph"/>
+						</span>
+					</div>
+				</li>
+				<li class="active">
+					<label class="label">散光（CYL）</label>
+					<div class="degrees">
+						<span>
+							<label class="label_two">左眼</label>
+							<input type="text" placeholder="请输入左眼散光" class="ipt"  id="leftcyl"/>
+						</span>
+						<span class="number">
+							<label class="label_two">右眼</label>
+							<input type="text" placeholder="请输入右眼散光" class="ipt"  id="rightcyl"/>
+						</span>
+					</div>
+				</li>
+				<li class="active">
+					<label class="label">轴位（AXIS）</label>
+					<div class="degrees">
+						<span>
+							<label class="label_two">左眼</label>
+							<input type="text" placeholder="请输入左眼轴位" class="ipt" id="leftaxis"/>
+						</span>
+						<span class="number">
+							<label class="label_two">右眼</label>
+							<input type="text" placeholder="请输入右眼轴位" class="ipt" id="rightaxis" />
+						</span>
+					</div>
+				</li>
+				<li>
+					<label>瞳距（PD）</label>
+					<input type="text" placeholder="请输入瞳距" id="eysPd"/>
+				</li>
+			</ul>-->
+			<!--save-->
+			<!--<div class="bottom_box" style="display:block">
+				<div class="add_box">
+					<a href="javacript:;" class="add">保存</a>
+				</div>
+			</div>-->
+		</div>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/Add_optometry.js" ></script>
+	</body>
+</html>

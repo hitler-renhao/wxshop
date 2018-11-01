@@ -1,0 +1,52 @@
+footer {
+	width: 100%;
+	height: 0.98rem;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	z-index: 1;
+	-border-top: 0.02rem solid #d5d5d5;
+	box-shadow: 0.05rem 0 0.1rem #d5d5d5;
+}
+footer a {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+footer a li {
+	width: 100%;
+	height: 0.78rem;
+	-border-right: 0.02rem solid #d5d5d5;
+	margin-top: 0.1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+footer a li.mine {
+	border-right: 0;
+}
+footer a .index img {
+	width: 0.46rem;
+	height: 0.44rem;
+}
+footer a .shop img {
+	width: 0.43rem;
+	height: 0.43rem;
+}
+footer a .res img {
+	width: 0.46rem;
+	height: 0.43rem;
+}
+footer a .mine img {
+	width: 0.44rem;
+	height: 0.45rem;
+}
+footer a li p {
+	font-size: 0.2rem;
+	color: #333;
+	margin-top: 0.05rem;
+}
+footer a li p.active {
+	color: #3f9df5;
+}

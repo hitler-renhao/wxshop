@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>我的订单</title>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="http://wx.bjysjglasses.com/static/wxshop/css/Mall_orders.css" />
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js"></script>		
+	</head>
+
+	<body>
+		<div id="container">
+			<!--弹框-->
+			<div class="tk">
+				<div class="popout">
+					<div class="popout_top">
+						取消订单<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_cancel.png" class="z_cancel" id="z_cancel" />
+					</div>
+					<div class="popout_bottom">
+						<p class="bule_title">取消订单后，本单享有的优惠可能会一并取消，是否 继续？</p>
+						<p>请选择取消订单的原因(必选)</p>
+						<ul class="reason_list" id="reason_list">
+							<li>
+								<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_selected.png" />
+								<p>配送信息有误</p>
+							</li>
+							<li>
+								<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" />
+								<p>发票信息有误</p>
+							</li>
+							<li>
+								<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" />
+								<p>商品买错了</p>
+							</li>
+							<li>
+								<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" />
+								<p>重复下单/误下单</p>
+							</li>
+						</ul>
+						<a href="javascript:;" class="confirm">确定</a>
+					</div>
+				</div>
+			</div>
+			<!--弹出层-->
+			<div class="bigbox" style="z-index:10000">
+				<div class="big_box">
+					<p>确定要删除该订单吗？</p>
+					<span class="word">
+						<a href="javascript:;">取消</a>
+						<a href="javascript:;">删除</a>
+					</span>
+				</div>
+			</div>
+			<!--收货弹出层-->
+			<div class="take">
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_successed.png" class="error" />
+				<p class="write">已确认收货</p>
+			</div>
+			<div class="bigbox" style="z-index:10000">
+				<div class="big_box">
+					<p>确定要删除该订单吗？</p>
+					<span class="word">
+						<a href="javascript:;">取消</a>
+						<a href="javascript:;">删除</a>
+					</span>
+				</div>
+			</div>
+			<!--顶部-->
+			<div class="toptop">
+				<div class="topbox">
+					<header class="flex">
+						<a href="main.html"><img class="back" src="http://wx.bjysjglasses.com/static/wxshop/images/jt_zuo.png"></a>
+						<p class="head_name">我的订单</p>
+					</header>
+					<!--按钮-->
+					<ul class="content_top" id="btn">
+						<li id="allOrder" style="border-bottom:0.03rem solid #67a9fe;color:#67a9fe">
+							<p value="">全部</p>
+						</li>
+						<li id="waitPay">
+							<p value="0">待付款</p>
+						</li>
+						<li id="waitColect">
+							<p value="1">待收货</p>
+						</li>
+						<li id="completed">
+							<p value="2">已完成</p>
+						</li>
+						<li id="cancel">
+							<p value="3">已取消</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--主体-->
+			<div class="content" id="wrapper">
+				<!--<div id="scroller">-->
+					<!--全部-->
+					<div class="body_box" style="padding:2rem 0 0.5rem 0;float:left;">
+					</div>
+					
+					<!--无订单展示-->
+					<div class="order_box" style="display:none;">
+						<div class="none_order">
+							<a href="javascript:;"></a>
+							<p>暂无相关的订单记录</p>
+						</div>
+					</div>
+					<div class="pull-loading"></div>
+				</div>
+			<!--</div>-->
+		</div>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/iscroll.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/Mall_orders.js"></script>
+		<script>
+			$(function() {
+				$('.content_top li').click(function() {
+					$(this).css({
+						'borderBottom': '0.03rem solid #67a9fe',
+						'color': '#67a9fe'
+					}).siblings().css({
+						'borderBottom': '0.03rem solid #fff',
+						'color': '#727272'
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>

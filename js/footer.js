@@ -1,0 +1,29 @@
+$(function(){
+	$("footer a").click(function() {
+		$(this).find('p').addClass('active').parent().parent().siblings().find('p').removeClass('active');
+	});
+	$(".one").click(function(){
+		$(this).find("img").attr("src","../images/home.png");
+		$(".two").find("img").attr("src","../images/serve.png");
+		$(".three").find("img").attr("src","../images/time.png");
+		$(".four").find("img").attr("src","../images/Icon_User.png");
+	})
+	$(".two").click(function(){
+		$(".one").find("img").attr("src","../images/home_check.png");
+		$(this).find("img").attr("src","../images/servr_check.png");
+		$(".three").find("img").attr("src","../images/time.png");
+		$(".four").find("img").attr("src","../images/Icon_User.png");
+	})
+	$(".three").click(function(){
+		$(".one").find("img").attr("src","../images/home_check.png");
+		$(".two").find("img").attr("src","../images/serve.png");
+		$(this).find("img").attr("src","../images/time_check.png");
+		$(".four").find("img").attr("src","../images/Icon_User.png");
+	})
+	$(".four").click(function(){
+		$(".one").find("img").attr("src","../images/home_check.png");
+		$(".two").find("img").attr("src","../images/serve.png");
+		$(".three").find("img").attr("src","../images/time.png");
+		$(this).find("img").attr("src","../images/Icon_User_check.png");
+	})
+})

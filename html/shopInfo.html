@@ -1,0 +1,380 @@
+<!-- 添加地址 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
+    <title>团队店铺详情</title>
+    <link rel="stylesheet" href="/static/app/css/common.css">
+    <link rel="stylesheet" href="/static/app/css/teamInfo1.css">
+    <link rel="stylesheet" href="/static/app/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/app/layui/css/modules/layer/default/layer.css">
+	<style>
+		.pic{
+			position: absolute;
+		    top: 0.25rem;
+		    left: 0.25rem;
+		    z-index: 20;
+		}
+		.pic img{
+			width:0.2rem;
+			height:0.3rem;
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+    	 <a href="/static/app/html/index_shop.html" class="pic">
+		   <img src="/static/app/images/icon_back2.png" /> 
+		 </a>
+        <div class="audit" id="shopName">
+        	
+        </div>
+        <div class="info">
+        	<ul class="list">
+        		<li data-type="1" class="active">今日</li>
+        		<li data-type="2">本周</li>
+        		<li data-type="3">本月</li>
+         </ul>
+        </div>
+        <!--折线图-->
+        <div class="line" id="main">
+         
+        </div>
+        <!--查看详情-->
+        <div class="lookInfo" id="details">
+        	
+        </div>
+        <div class="right">
+         <a href="javascript:;" class="btn">
+          <button>关闭此店铺</button>
+         </a>
+        </div>
+        
+    </div>
+     <div class="closeAccount">
+    	<h2>请确定要关闭此员工账号吗？</h2>
+    	<p>关闭后将看不到该员工的任何信息</p>
+    	<a href="javascript:;">
+    		<button type="button" class='yes'>是</button>
+    		<button type='button' class='no'>否</button>
+    	</a>
+    </div>
+</body>
+<script src="/static/app/js/common/jquery-3.3.1.min.js"></script>
+<script src="/static/app/js/common/common.js"></script>  
+<script src="/static/app/js/common/commonUrl.js"></script>
+<script src="/static/app/js/common/template.js"></script>
+<script src="/static/app/js/common/echarts.min.js"></script>
+<script src="/static/app/layui/lay/modules/layer.js"></script>
+
+<!-- 以下模板引擎需要店铺token -->
+<!-- 以下模板引擎需要店铺token -->
+<!-- 以下模板引擎需要店铺token -->
+<script type="text/html" id="nameTpl">
+ <span class="user">
+ 	<% var picUrl = ''; %>
+	<% if (data.picture == null || data.picture == '') { %>
+		<% picUrl = '/static/app/images/head.png'; %>
+	<% } else { %>
+		<% picUrl = data.picture; %>
+	<% } %>
+  <img src="<%:=picUrl%>" id="portrait"/>
+ </span>
+ <p><%:=data.shopname%></p>
+</script>
+
+<!-- 以下模板引擎需要店铺token -->
+<!-- 以下模板引擎需要店铺token -->
+<!-- 以下模板引擎需要店铺token -->
+<script type="text/html" id="detailsTpl">
+	<% var shopIds = getCookie('loginUserId'); %>
+ <h3>查看详情</h3>
+ <div class="shopBox">
+  <div class="one">
+   <img src="/static/app/images/111.png" alt="person" class="person"/>
+   <p>门店员工</p>
+   <p><%:=data.staffcount%>人</p>
+   <a href="/static/app/html/customerData_r.html?id=<%:=shopIds%>" class="look">去查看</a>
+  </div>
+  <ul class="infoL">
+   <li style="margin-bottom:0.3rem;" class="indent">
+    <a href="javascript:;" id="toAllOrders">
+     <img src="/static/app/images/222.png" alt="" class="icon" />
+     <span class="infoa">
+     <p>服务预约单</p>
+     <p><%:=data.ordercount%>单</p>
+     </span>
+    </a>
+   </li>
+   <li class="totalMoney">
+    <a href="/static/app/html/merchantAccount_r.html?totalMoney=<%:=data.amount%>&id=<%:=shopIds%>">
+     <img src="/static/app/images/33.png" alt="" class="icon" />
+     <span class="infoa">
+      <p>总金额</p>
+      <p><%:=data.amount%>元</p>
+     </span>
+    </a>
+   </li>
+  </ul>
+  <div class="goodsNum">
+  	
+  	
+  	
+  	
+  	<a href="javascript:;" class="abtn">
+	   <img src="/static/app/images/44.png" alt="商品" />
+	   <p>商品数量</p>
+    </a>
+  </div>
+ </div> 
+ 
+</script>
+
+<script type="text/html" id="goodsTpl">
+	
+</script>
+
+<script>
+	// 地址栏ID
+var shopIds = getCookie('loginUserId');
+$('#details').on('click', '#toAllOrders', function () {
+	location.href = "/static/app/html/allOrders_r.html?id=" + shopIds;
+})
+var optistId=getCookie("loginUserId");
+$('#details').on('click', '.abtn', function () {
+	location.href = "/static/app/html/productList_r.html?id=" + shopIds;
+})
+/*$('.pic').on('click',function(){
+	window.history.go(-1);
+})*/
+ // cookie
+ // var optistId = getCookie("loginUserId");
+ var nameTpl = document.getElementById('nameTpl').innerHTML;
+ var shopName = $('#shopName');
+
+ const detailsDetails = global + '/v1.0/merchant/branchStoreStatistic?shopId=';
+ // 地址用于获取头像和店名
+ const distanceShop = global + '/v1.0/merchant/branchStoreDetails?shopId=';
+ 
+ var detailsTpl = document.getElementById('detailsTpl').innerHTML;
+ var detailsLists = $('#details');
+
+ function tpl(Tpl, type, url, list) {
+  $.ajax({
+   url: url,
+   type: type,
+   dateType: 'json',
+   success: function(msg) {
+    if(msg.code == 200) {
+     console.log(msg);
+     var html = template(Tpl, msg);
+     list.html(html);
+    }
+   }
+  })
+ };
+
+ tpl(detailsTpl, 'get', detailsDetails + shopIds, detailsLists);
+ tpl(nameTpl, 'get', distanceShop + shopIds, shopName);
+
+
+ // 折线图添加类名
+ $('.info .list li').click(function() {
+  $(this).addClass('active').siblings().removeClass('active');
+  var data_type = $(this).attr('data-type');
+  lineChart(data_type);
+ });
+      //折线图
+    function lineChart(data_type) {
+     var myChart = echarts.init(document.getElementById('main'));
+     myChart.setOption({
+             tooltip: {},
+             xAxis: {
+                 data: []
+             },
+             yAxis: {},
+             series: [{
+                 name: '销量',
+                 type: 'bar',
+                 data: []
+             }]
+         });
+         myChart.showLoading();    //数据加载完之前先显示一段简单的loading动画
+         var lis = document.querySelectorAll('li');
+         for(var i = 0; i < lis.length; i ++) {
+          if(lis[i].getAttribute("class") == 'active') {
+           // var data_type = $(this).attr('data-type');
+           zhexian(shopIds, data_type, 1, 10);
+          }
+         }
+         
+    //折线图
+	 function zhexian(shopId,queryType, pageNum, pageSize){
+        $.ajax({
+        	type:"get",
+            url:global + '/v1.0/merchant/amountDetail',
+        	async:true,
+        	data:{
+        		// offset:0,
+        		// limit:20,
+        		// optUserId:optistId,
+        		// type:datatype,
+        		// starttime:startime,
+          // endtime:endtime,
+          shopId: shopId, 
+          queryType: queryType,
+          pageNum: pageNum,
+          pageSize: pageSize
+        	},
+        	success:function(data){
+          var rows = data.data.list;  
+        		var names=[];    //类别数组（实际用来盛放X轴坐标值）
+     			  var nums=[];    //销量数 
+        		if (rows) {
+           for(var i=0;i<rows.length;i++){
+               names.push(rows[i].createtime);    //挨个取出类别并填入时间数组
+            }
+           for(var i=0;i<rows.length;i++){
+               nums.push(rows[i].fee);    //挨个取出销量并填入销量数组
+             }
+           myChart.hideLoading();    //隐藏加载动画
+           option = {
+				       visualMap: [{
+            show: false,
+            type: 'continuous',
+            seriesIndex: 0,
+            min: 0,
+            max: 400
+				        }, {
+             show: false,
+             type: 'continuous',
+             seriesIndex: 1,
+             dimension: 0,
+             min: 0,
+             max: names.length - 1
+				        }],
+				        title: [{
+             left: 'center',
+             text: ''
+				        }],
+				        tooltip: {
+				         trigger: 'axis'
+				        },
+				        xAxis:[
+             {
+                 // data: dateList
+             }, 
+             {
+              data: names,
+              gridIndex: 1,
+              axisLabel: {
+                  fontSize: 12,
+                  lineStyle: {
+		              // 设置y轴颜色
+		              color: '#ddd'
+		            }
+              }
+              
+             }
+				        ],
+				        yAxis: [
+				            {
+				                plitLine: {show: false}
+				            }, 
+				            {
+				                splitLine: {show: false},
+				                gridIndex: 1 ,
+				                axisLabel: {
+				                    fontSize: 12
+				                }
+				            }
+				        ],
+				         axisLabel: {
+              margin: 2,
+              formatter: function (value, index) {
+              	if(value >= 1000 && value < 10000){
+              	value = value / 1000 + "千";	
+               }else if (value >= 10000 && value < 10000000) {
+                value = value / 10000 + "万";
+               } else if (value >= 10000000) {
+                value = value / 10000000 + "千万";
+               }
+               return value;
+              }
+					        },
+				        grid: [{
+				         // bottom: '5%'
+				        }, {
+				         top: '20%'
+				        }],
+				        series: [{
+				         type: 'line',
+				         showSymbol: false,
+				         // data: valueList
+				        }, {
+             type: 'line',
+             showSymbol: false,
+             data: nums,
+             xAxisIndex: 1,
+             yAxisIndex: 1
+				        }]
+				       };
+				       myChart.setOption(option);
+	         }
+			      },
+        	error:function(errorMsg) {
+          //请求失败时执行该函数
+         //alert("图表请求数据失败!");
+         myChart.hideLoading();  
+	       }
+       });
+     }
+    }
+    lineChart(3);
+
+
+    // 关闭店铺
+    $('.btn button').click(function() {
+        /*layer.msg('确定要关闭此店铺吗？', {
+            time: 0,
+            btn: ['是', '否'],
+            yes: function(index){
+                layer.close(index);
+                layer.msg('店铺已关闭', {
+                    icon: 6,
+                });
+                window.location.href="./MyTeam.html";
+            }
+        });*/
+       layer.open({
+		  type: 1,
+		  title:false,
+		  closeBtn: 0, //不显示关闭按钮
+		  anim: 2,
+		  shadeClose: true, //开启遮罩关闭
+		  content: $('.closeAccount')
+		});
+		$('.yes').click(function(){
+			$.ajax({
+				type:"put",
+				url:global+"/v1.0/merchant/closeShop",
+				data:{
+					shopId:shopIds
+				},
+				success:function(data){
+					if(data.code==200){
+						layer.msg('删除成功')
+						window.location.href="/static/app/html/MyTeam.html?type=1";
+					}
+				}
+			});
+		})
+		$('.no').click(function(){
+			layer.closeAll();
+		})
+    })
+</script>
+</html>

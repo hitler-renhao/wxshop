@@ -1,0 +1,241 @@
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	background:#25282f;
+	-overflow: inherit;
+}
+.swiper-wrapper{
+	height:1.12rem;
+}
+.downList .swiper-slide {
+	width: 1.4rem;
+	height: 1rem;
+	margin-right: 0;
+	-position: relative;
+}
+
+.redbox{
+	position:absolute;
+	bottom:0;
+	left:50%;
+	width: 0;
+
+	height: 0;
+	
+	border-width: 0.4rem;
+	
+	border-style: solid;
+	
+	border-color: red transparent transparent transparent;
+}
+/*列表*/
+
+.seckillList {
+	width: 100%;
+	-height: 6.1rem;
+	-padding-top: 0.29rem;
+}
+
+.seckillList li {
+	float: left;
+	width: 100%;
+	border-top: 1px solid #dedede;
+	padding-bottom: 0.08rem;
+}
+
+.seckillList li:first-child {
+	border-top: none;
+}
+
+.seckillList li img {
+	display: inline-block;
+	width: 2.4rem;
+	height: 1.65rem;
+	float: left;
+	margin: 0.1rem 0.1rem 0 0.24rem;
+}
+
+.seckbox {
+	display: inline-block;
+	float: left;
+	width: 4.6rem;
+}
+
+.seckbox h3 {
+	-float: left;
+	color: #666;
+	font-size: 0.3rme;
+	line-height: 0.46rem;
+	margin-top: 0.15rem;
+}
+
+.linebox {
+	display: inline-block;
+	width: 2.6rem;
+	height: 0.22rem;
+	background: #ccc;
+	margin: 0.1rem 0;
+}
+
+.seckbox p {
+	color: #fc0404;
+	font-size: 0.24rem;
+	line-height: 0.4rem;
+}
+
+.seckbox p s {
+	color: #999;
+}
+
+.rob {
+	float: right;
+	width: 0.98rem;
+	height: 0.38rem;
+	border: 1px solid #fb4232;
+	color: #fb4232;
+	font-size: 0.22rem;
+	line-height: 0.38rem;
+	text-align: center;
+	border-radius: 0.05rem;
+	margin-top: -0.1rem;
+}
+
+
+/*开抢进度*/
+
+.progress-bar {
+	display: inline-block;
+	width: 2.6rem;
+	height: 0.22rem;
+	border-radius: 0.11rem;
+	position: relative;
+	background: #FCD2D3;
+	font-size: 0.12rem;
+	line-height: 0.22rem;
+	color: #fff;
+}
+
+.progress-bar-left {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.progress-bar-right {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0.02rem;
+	-color: #fb4232;
+}
+
+.progress-bar-content {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	-width: auto;
+	height: 0.22rem;
+	border-radius: 0.11rem;
+}
+/*//////*/
+#wrapper {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 2.7rem;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+    -ms-touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+#scroller {
+	background: #fff;
+}
+.pull-loading {
+	background: #fff;
+    text-align: center;
+    height: 1rem;
+    line-height: 1rem;
+    -display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+	margin-top: 0.88rem;
+	width: 100%;
+	height: auto;
+}
+
+.downList {
+	width: 100%;
+	height: 1rem;
+	background: #25282f;
+}
+
+.downList span {
+	display: block;
+	width: 100%;
+	height: 1.12rem;
+	text-align: center;
+}
+
+.downList span time {
+	color: #fff;
+	font-size: 0.3rem;
+	line-height: 0.36rem;
+	margin-top: 0.17rem;
+	display: inline-block;	
+}
+
+.downList span p {
+	color: #fff;
+	font-size: 0.24rem;
+	line-height: 0.36rem;
+}
+
+.downList .active {
+	background: url(../images/duo.png) 0 0 no-repeat;
+	background-size: 1.4rem 1.12rem;
+}
+
+.time {
+	width: 100%;
+	height: 0.6rem;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	text-align: center;
+	line-height: 0.6rem;
+	margin-top:0.25rem;
+}
+
+.time p {
+	float: left;
+	display: inline-block;
+	margin-left: 2.1rem;
+}
+
+.timebox {
+	float: left;
+	display: inline-block;
+}
+
+.timebox em {
+	font-style: normal;
+}
+.content text{
+	display:none;
+}
+.content .show{
+	display:block;
+}

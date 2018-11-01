@@ -1,0 +1,46 @@
+
+
+	————首页————
+
+首页   index.html
+分类   shop.html
+预约界面     res_infor.html
+我的    main.html
+	————分类————
+
+
+镜片页 sunglasses.html?id=2
+镜架页 sunglasses.html?id=4
+太阳镜页 sunglasses.html?id=1
+
+	————预约————
+
+预约选择商品    res-chose.html
+预约成功  successful_appointment.html
+选择验光师   storeList.html
+
+	————我的————
+
+
+订单页 Mall_orders.html
+订单确认页 orderDetails_waitPay.html
+验光单  Optometry_management.html
+我的预约 my_reservation.html
+地址管理 Management_address.html
+新增地址 add_address.html
+编辑地址 edit_address.html
+
+
+
+      	 ————其他————
+
+购物车         car.html
+订单确认页   order_fill.html
+商品详情页   goodsDetails_sunglasses.html
+秒杀详情页   seckill_info.html
+
+
+
+
+
+

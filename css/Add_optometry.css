@@ -1,0 +1,114 @@
+/*验光单信息*/
+.list {
+	width: 100%;
+	height: auto;
+	margin-top:0.88rem;	
+}
+.list li {
+	width: 100%;
+	height: 0.86rem;
+	border-bottom: 1px solid #e4e4e4;
+}
+.list li label {
+	display: inline-block;
+	width: 2.66rem;
+	height: 100%;
+	padding-left: 0.24rem;
+	float: left;
+	line-height: 0.86rem;
+}
+.list li input {
+	display: inline-block;
+	width: 4rem;
+	padding: 0 0.27rem;
+	font-size: 0.2rem;
+	color: #727272;
+	line-height: 0.86rem;
+	float: left;
+	outline: none;
+	border: none;
+}
+.list .active {
+	height: 1.74rem;
+}
+.list li .label {
+	line-height: 1.74rem;
+	width: 2.65rem;
+	border-right: 1px solid #e4e4e4;
+}
+.degrees {
+	float: left;
+	width: 4.58rem;
+	height: 1.74rem;
+}
+.degrees span {
+	display: inline-block;
+	width: 100%;
+	height: 0.86rem;
+	border-bottom: 1px solid #e4e4e4;
+	float: left;
+}
+.degrees .number {
+	border-bottom: none;
+	height: 0.85rem;
+}
+.list li .ipt {
+	width: 2.8rem;
+	height:0.85rem;
+	padding: 0 0.4rem;
+	font-size:0.2rem;
+}
+.list li .label_two {
+	padding-left: 0.27rem;
+	width: 0.7rem;
+}
+.bottom_box {
+	width: 100%;
+	height: auto;
+	/*position: fixed;
+	bottom: 0.9rem;
+	left: 0;
+	display:none;*/
+	margin-top: 0.9rem;
+}
+.add_box {
+	padding: 0 0.24rem;
+	height: 1.03rem;	
+}
+.add {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../images/add.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	font-size: 0.4rem;
+	line-height:1.03rem;
+	text-align: center;
+	color:#fff;
+}
+/*弹出层*/
+.bigbox {
+	width: 2.35rem;
+	height: 1.35rem;
+	background: url(../images/block.png);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: none;
+}
+.error {
+	display: block;
+	width: 0.46rem;
+	height: 0.46rem;
+	margin: 0.23rem auto 0;
+}
+.write {
+	color: #fff;
+	font-size: 0.28rem;
+	line-height: 0.6rem;
+	text-align: center;
+}

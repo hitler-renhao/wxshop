@@ -1,0 +1,173 @@
+header {
+	border-bottom: none;
+	background: #399af5;
+	color: #fff;
+}
+
+header p.title {
+	color: #fff;
+}
+
+.content {
+	margin-top: 0.88rem;
+	width: 100%;
+	height:3.2rem;	
+	background: url(../images/raa.png) center top no-repeat;
+	background-size: 100% 3.2rem;
+	padding-top: 0.8rem;
+}
+
+.kuang {
+	width: 7.02rem;
+	height: 3.4rem;
+	background: #f5f5f5;
+	box-shadow: 0.05rem 0.05rem 0.1rem #e5f2fe;
+	margin: 0 0.24rem;
+	float: Left;
+}
+
+.userinfo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.userinfo img {
+	width: 1.35rem;
+	height: 1.35rem;
+	margin-top: -0.68rem;
+}
+
+.name {
+	color: #333;
+	font-size: 0.34rem;
+}
+
+.userinfo span {
+	display: inline-block;
+	width: 2.5rem;
+	height: 0.35rem;
+	background: #00dec7;
+	color: #fff;
+	font-size: 0.24rem;
+	line-height: 0.35rem;
+	border-radius: 0.05rem;
+	text-align: center;
+	margin: 0.05rem 0;
+}
+
+.address {
+	color: #333;
+	font-size: 0.18rem;
+}
+
+.address i {
+	display: inline-block;
+	width: 0.14rem;
+	height: 0.18rem;
+	background: url(../images/address1.png) 0 0;
+	background-size: cover;
+}
+
+
+/*评价*/
+
+.evaluate {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
+.evaluate li number {
+	color: #00dec7;
+	font-size: 0.34rem;
+}
+
+.evaluate li p {
+	color: #333;
+	font-size: 0.24rem;
+	text-align: center
+}
+
+.star {	
+	float: left;
+	margin: 0.32rem 0 0.32rem 2rem;	
+}
+
+.star i {
+	float: left;
+	display: inline-block;
+	width: 0.47rem;
+	height: 0.44rem;
+	background: url(../images/star.png) 0 0 no-repeat;
+	background-size: cover;
+	margin: 0 0.11rem;
+}
+
+.star span {
+	float: left;
+	color: #ffb200;
+	font-size: 0.4rem;
+	margin-top:-0.1rem;
+}
+.star img{
+	float: left;
+}
+.info {
+	width: 100%;float: left;
+}
+
+.info li {
+	float: left;
+	border-bottom: 0.2rem solid #f2f2f2;
+}
+
+.info li span {
+	border-bottom: 1px solid #e4e4e4;
+	width: 100%;
+	height: 0.55rem;
+	display: inline-block
+}
+
+.info li span h3 {
+	color: #333;
+	font-size: 0.28rem;
+	background: url(../images/shanc.png) left center no-repeat;
+	background-size: 0.29rem 0.29rem;
+	margin-left: 0.24rem;
+	line-height: 0.55rem;
+}
+.info li span .hh{
+	background: url(../images/dsc.png) left center no-repeat;
+	background-size: 0.24rem 0.28rem;
+}
+.info li p {
+	padding: 0.1rem 0.24rem;
+	line-height: 0.4rem;
+	display:inline-block;
+	width:7.02rem;
+}
+
+.bottom {
+	padding: 0 0.24rem;
+	height: 0.88rem;
+	margin-top: 1rem;
+	float:left;
+}
+
+.bottom button {
+	width: 7.02rem;
+	height: 0.88rem;
+	line-height: 0.88rem;
+	text-align: center;
+	color: #fff;
+	background: #399af5;
+	font-size: 0.4rem;
+	outline: none;
+	border: none;
+	border-radius: 0.2rem;
+}

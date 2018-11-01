@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="format-detection" content="telephone=yes"/>
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/footer.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/main.css" />
+		<script type='text/javascript' src='https://webchat.7moor.com/javascripts/7moorInit.js?accessId=7f80fbd0-22b3-11e8-bd7b-9bdd5194cd62&autoShow=false&language=ZHCN' async='async'></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js"></script>
+		<script type="text/javascript">
+			var mallLoginUser=getCookie("mallLoginUser");
+			
+		</script>
+	</head>
+	<style type="text/css">
+		.bar{
+			/*position: relative;*/
+			width: 0.5rem;
+			height: 0.4rem;
+		}
+		.carico{
+			width: .5rem;
+			height: .5rem;
+			border-radius: 50%;
+			background: #FF0000;
+			display: inline-block;
+			position: absolute;
+			bottom: 0.06rem;
+			right: -.20rem;
+			opacity: 1;
+			font-size: .12rem;
+			transform: scale(0.6,0.6);
+		}
+		.carico i{
+			font-style: normal;
+			font-size: .2rem;
+			display: inline-block;
+			color: #fff;
+			width: .5rem;
+			height:.5rem;
+			line-height: .5rem;
+			text-align: center;
+			transform: scale(1,1);
+		}
+	</style>
+	<body>
+		<div id="container">
+			<!-- 头部 -->
+			<div class="topbox">
+				<div class="icon">
+					<a href="car.html" class="bar">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/bar2.png" />
+					</a>
+				</div>
+				<div class="content_top">
+					<div class="head_portrait">
+						<img src="" alt="头像" />
+						</div>
+						<span class="info"></span>
+						<!--<p>'+ userName +'</p>'-->
+						
+				</div>
+			</div>
+			<!--body-->
+			<div class="order" onclick="window.location.href='Mall_orders.html'">
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/order.png" class="order_img" />
+				<p class="op">我的订单</p>
+				<a href="javascript:;" class="order_all">
+					<p class="all">全部订单</p>
+					<img class="tz" src="http://wx.bjysjglasses.com/static/wxshop/images/href.png" />
+				</a>
+			</div>
+			<div class="ul">
+				<ul class="ul_list flex">
+					<li id="paywait" dataType="init">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/fk.png" />
+						<p>待付款</p>
+					</li>
+					<li id="send" dataType="send">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/dsh.png" />
+						<p>待收货</p>
+					</li>
+					<li id="finish" dataType="finish">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/successed.png" />
+						<p>已完成</p>
+					</li>
+				</ul>
+			</div>
+			<!--分类-->
+			<ul class="list">
+				<a href="Optometry_management.html">
+					<li>
+						<img class="yy" src="http://wx.bjysjglasses.com/static/wxshop/images/z_optometry.png" />
+						<p>我的验光单</p>
+						<img class="jiantou" src="http://wx.bjysjglasses.com/static/wxshop/images/href.png" />
+					</li>
+				</a>
+				<a href="my_reservation.html">
+					<li>
+						<img class="yy" src="http://wx.bjysjglasses.com/static/wxshop/images/z_insurance.png" />
+						<p>我的预约</p>
+						<img class="jiantou" src="http://wx.bjysjglasses.com/static/wxshop/images/href.png" />
+					</li>
+				</a>
+				<a href="Management_address.html">
+					<li>
+						<img class="shili" src="http://wx.bjysjglasses.com/static/wxshop/images/z_geography.png" />
+						<p>地址管理</p>
+						<img class="jiantou" src="http://wx.bjysjglasses.com/static/wxshop/images/href.png" />
+					</li>
+				</a>
+				<a href="javascript:;">
+					<li onclick="qimoChatClick();">
+						<img class="dizhi" src="http://wx.bjysjglasses.com/static/wxshop/images/service.png" />
+						<p>在线客服</p>
+						<img class="jiantou" src="http://wx.bjysjglasses.com/static/wxshop/images/href.png" />
+					</li>
+				</a>
+				<a href="tel:01053933883">
+					<li>
+						<img class="phone" src="http://wx.bjysjglasses.com/static/wxshop/images/phone.png" />
+						<p>客服热线</p>
+						<img class="jiantou" src="http://wx.bjysjglasses.com/static/wxshop/images/href.png" />
+					</li>
+				</a>
+				<a href="javascript:;" onclick="location.href='http://wx.bjysjglasses.com:8098/ysjim/im/cuslogin?mallLoginUser='+mallLoginUser;">
+					<li>
+						<img class="phone" src="http://wx.bjysjglasses.com/static/wxshop/images/news.png" />
+						<p>e可IM</p>
+						<img class="jiantou" src="http://wx.bjysjglasses.com/static/wxshop/images/href.png" />
+					</li>
+				</a>
+			</ul>
+			<!-- footer -->
+			<footer>
+				<a class="one" href="index.html">
+					<li class="index">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/home_check.png" />
+						<p>首页</p>
+					</li>
+				</a>
+				<a class="two" href="http://wx.bjysjglasses.com/static/wxshop/html/shop.html">
+					<li class="shop flex">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/serve.png" />
+						<p>分类</p>
+					</li>
+				</a>
+				<a class="three" href="http://wx.bjysjglasses.com/static/wxshop/html/res_infor.html">
+					<li class="res flex">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/time.png" />
+						<p>预约验光</p>
+					</li>
+				</a>
+				<a class="four" href="http://wx.bjysjglasses.com/static/wxshop/html/main.html">
+					<li class="mine flex">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/Icon_User_check.png" />
+						<p class="active">我的</p>
+					</li>
+				</a>
+			</footer>
+		</div>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/footer.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/main.js"></script>
+		<script>
+			$(function(){
+				$("#paywait").on("click",function(){
+					window.location.href = "http://wx.bjysjglasses.com/static/wxshop/html/orderPay.html";
+				})
+				$("#send").on("click",function(){
+					window.location.href = "http://wx.bjysjglasses.com/static/wxshop/html/orderSend.html";
+				})
+				$("#finish").on("click",function(){
+					window.location.href = "http://wx.bjysjglasses.com/static/wxshop/html/orderFinish.html";
+				})
+				var account = getCookie("account");
+				$.ajax({
+			            type: "Post",
+	            		url: glob + "/v1.0/car/getCarProd",
+			            dataType: "json",			            
+			            data:{
+			            	"account":account,			            	
+						},
+						success:function(data){
+							console.log(data.data);
+							var dat = data.data
+							
+							if(dat==null){
+								console.log('105')
+								$('.carico').hide()
+							}else{ 
+								console.log('108')
+								var num = data.data.length
+								$('.carico i').text(num)			
+							}							
+						}
+				    });
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>秒杀列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/swiper-4.2.2.min.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/header.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/down_list.css" />
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js"></script>
+	</head>
+
+	<body>
+		<div id="container">
+			<!-- 头部 -->
+			<header>
+				<a href="Appointment_optometrist.html"><img class="back" src="http://wx.bjysjglasses.com/static/wxshop/images/head_jiantou.png" /></a>
+				<p class="title">秒杀列表</p>
+				<a class="head_car" href="car.html">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/bar.png" />
+				</a>
+			</header>
+			<div class="content" id="content">
+				<!--开抢列表-->
+				<div class="downList">
+					<div class="swiper-container">
+						<ul class="swiper-wrapper" id="btn">
+							<!--<li class="swiper-slide" >
+								<span>
+									<time>12:00</time>
+									<p id="timera">已开抢</p>
+								</span>
+							</li>
+							<li class="swiper-slide" num="1">
+								<span>
+									<time>13:00</time>
+									<p id="timerb">已开抢</p>
+								</span>
+							</li>
+							<li class="swiper-slide">
+								<span>
+									<time>14:00</time>
+									<p id="timerc">已开抢</p>
+								</span>
+							</li>
+							<li class="swiper-slide">
+								<span>
+									<time>15:00</time>
+									<p id="timerd">已开抢</p>
+								</span>
+							</li>
+							<li class="swiper-slide">
+								<span>
+									<time>16:00</time>
+									<p id="timere">已开抢</p>
+								</span>
+							</li>
+							<li class="swiper-slide">
+								<span>
+									<time>17:00</time>
+									<p id="timerf">已开抢</p>
+								</span>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+
+				<!--开抢列表结束-->
+				<text class="show">
+					<div class="time" id="time">
+						<p id="text"></p>
+						
+					</div>
+					<div id="wrapper">
+		       	 		<div id="scroller">
+							<p id="Pstyle" style="width:2.6rem;"></p>
+							<ul class="seckillList" id="popular">
+							
+							</ul>
+							<div class="pull-loading">上拉加载</div>
+						</div>
+					</div>
+				</text>
+				
+			</div>
+			<p id="time"></p>
+		</div>
+
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/swiper-4.2.2.min.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/iscroll.js" ></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/down_list1.js" ></script>
+		<script type="text/javascript">
+			$(function() {
+				var swiper = new Swiper('.downList .swiper-container', {
+					slidesPerView: 'auto',
+					spaceBetween: 20,
+					freeMode: false,
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					}
+				});
+				
+//				$('.seckillList li').on('click',function(){
+//					window.location.href="seckill_info.html";
+//				})
+			})
+		</script>
+		<script type="text/javascript">
+			//			var zongshu = 100; //总数量
+			//			var ProgresLeft = 30; //抢购数量
+			//			var Progresright = zongshu - ProgresLeft; //抢购剩余数量
+			//			//总数量
+			//			var Pro = document.getElementById("progress-bar-content2"); //抢购的id
+			//			var Progres = document.getElementById("progress-bar2").offsetWidth; //总的宽度
+			//			var dandian = Progres / zongshu; //1% 的宽度
+			//			Pro.style.width = dandian * ProgresLeft + "px"; //抢购的长度
+			//			Pro.style.background = "red"; //抢购的长度的颜色
+			//			var aaa = zongshu / 100; //%1 的眼镜数量
+			//			var aaaa = Progresright / aaa + "%"; //剩余眼睛的数量百分比
+			//			$(".progress-bar-righta b").html(aaaa); //抢购数量
+			//			$(".progress-bar-lefta b").html(ProgresLeft) //剩余眼睛的数量百分比
+//			  function getNowFormatDate() {
+//		        var date = new Date();
+//		        var seperator1 = "-";
+//		        var year = date.getFullYear();
+//		        var month = date.getMonth() + 1;
+//		        var strDate = date.getDate();
+//		        if (month >= 1 && month <= 9) {
+//		            month = "0" + month;
+//		        }
+//		        if (strDate >= 0 && strDate <= 9) {
+//		            strDate = "0" + strDate;
+//		        }
+//		        var currentdate = year + seperator1 + month + seperator1 + strDate;
+//		        return currentdate;
+//		    }
+//			 var  GetDate=getNowFormatDate()
+			 
+		</script>
+		
+		<script type="text/javascript">
+//			var singleTime="";
+//			var arr=window.location.href;
+//			var Numa=arr.split("?")[1]
+//			//alert(Numa)
+//			var btn = document.getElementById('btn');
+//			var aLi = btn.getElementsByTagName('span');
+//			if(Numa==7){
+//				Numa=1
+//			}
+//			if(Numa==1){
+//				singleTime="12:00";
+//			}else if(Numa==2 ){
+//				singleTime="13:00";
+//			}else if(Numa==3 ){
+//				singleTime="14:00";
+//			}else if(Numa==4 ){
+//				singleTime="15:00";
+//			}else if(Numa==5 ){
+//				singleTime="16:00";
+//			}else if(Numa==6 ){
+//				singleTime="17:00";
+//			}
+//			
+//			aLi[Numa-1].className = 'active';
+//			var timer=null;
+//
+//           clearInterval(timer)
+//           var aaaaaa=1
+//			timer = setInterval(countTime(singleTime), 1000); 
+//			function countTime(singleTime) {
+//				
+//				var date = new Date();
+//				
+//	  			var year = date.getFullYear(); //得到年份
+//	 		 	var month = date.getMonth()+1;//得到月份
+//	  			var datea = date.getDate();//得到日期
+//	  			var GetDatea=year+"-"+month+"-"+datea;
+//
+//
+//	  			var month = toDub(date.getMonth() + 1);//月
+//				var day = toDub(date.getDate());//日
+//				var hour = toDub(date.getHours());//时
+//				var minute = toDub(date.getMinutes());//分
+//				var second = toDub(date.getSeconds());//秒 
+//				   //当前时间
+//				 var curTime = date.getFullYear() + "-" + month + "-" + day
+//				            + " " + hour + ":" + minute + ":" + second;
+//				//alert(date)
+//				var now = date.getTime();
+//				//设置截止时间  
+//				
+//				var endDate = new Date(GetDatea+" "+singleTime);
+//				var endDateA = new Date(GetDatea+" 12:00:00");
+//				var endDateB = new Date(GetDatea+" 13:00");
+//				var endDateC = new Date(GetDatea+" 14:00");
+//				var endDateD = new Date(GetDatea+" 15:00");
+//				var endDateE = new Date(GetDatea+" 16:00");
+//				var endDateF = new Date(GetDatea+" 17:00");
+//				var endDateG = new Date(GetDatea+" 18:00");
+//			
+//				var timestampA = Date.parse(endDateA)
+//				var timestampB = Date.parse(endDateB)
+//				var timestampC = Date.parse(endDateC)
+//				var timestampD = Date.parse(endDateD)
+//				var timestampE = Date.parse(endDateE)
+//				var timestampF = Date.parse(endDateF)
+//				var timestampG = Date.parse(endDateG)
+//				var timestamp = Date.parse(curTime)
+//
+//
+//				if(timestamp<endDateA){
+//					$("#timera").html("即将开抢")
+//				}else if(timestamp>=endDateA && timestamp<endDateB){
+//					$("#timera").html("正在开抢")
+//				}else if(timestamp>endDateB){
+//					$("#timera").html("已开抢")
+//				}
+//
+//				if(timestamp<endDateB){
+//					$("#timerb").html("即将开抢")
+//				}else if(timestamp>=endDateB && timestamp<endDateC){
+//					$("#timerb").html("正在开抢")
+//				}else if(timestamp>endDateC){
+//					$("#timerb").html("已开抢")
+//				}
+//
+//				if(timestamp<endDateC){
+//					$("#timerc").html("即将开抢")
+//				}else if(timestamp>=endDateC && timestamp<endDateD){
+//					$("#timerc").html("正在开抢")
+//				}else if(timestamp>endDateD){
+//					$("#timerc").html("已开抢")
+//				}
+//
+//				if(timestamp<endDateD){
+//					$("#timerd").html("即将开抢")
+//				}else if(timestamp>=endDateD && timestamp<endDateE){
+//					$("#timerd").html("正在开抢")
+//				}else if(timestamp>endDateE){
+//					$("#timerd").html("已开抢")
+//				}
+//
+//				if(timestamp<endDateE){
+//					$("#timere").html("即将开抢")
+//				}else if(timestamp>=endDateE && timestamp<endDateF){
+//					$("#timere").html("正在开抢")
+//				}else if(timestamp>endDateF){
+//					$("#timere").html("已开抢")
+//				}
+//
+//				if(timestamp<endDateF){
+//					$("#timerf").html("即将开抢")
+//				}else if(timestamp>=endDateF && timestamp<endDateG){
+//					$("#timerf").html("正在开抢")
+//				}else if(timestamp>endDateG){
+//					$("#timerf").html("已开抢")
+//				}
+//		
+//				var end = endDate.getTime();
+//				var last = endDate.getTime() +3600000;
+//
+//
+//				if(end<=timestamp && timestamp<=last){
+//
+//					//时间差  
+//					var leftTime = last - timestamp;
+//					//console.log(leftTime)
+//					//定义变量 d,h,m,s保存倒计时的时间  
+//					var d, h, m, s;
+//					if(leftTime >= 0) {
+//						//              d = Math.floor(leftTime/1000/60/60/24);  
+//						h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
+//						//console.log(h)
+//						m = Math.floor(leftTime / 1000 / 60 % 60);
+//						//console.log(m)
+//						s = Math.floor(leftTime / 1000 % 60);
+//						//console.log(s)
+//					}
+//					var IHTML='距本场结束剩余 : '+toDub(h)+" : "+toDub(m)+" : "+toDub(s)
+//					//将倒计时赋值到div中  
+//					document.getElementById("text").innerHTML = IHTML
+//						
+//						
+//						//递归每秒调用countTime方法，显示动态时间效果  
+//					
+//					//递归每秒调用countTime方法，显示动态时间效果  
+//				}else{
+//					$("#time").css("display","none")
+//				}
+//				
+//			
+//			
+//				clearInterval(timer)
+//				timer = setInterval("countTime(singleTime)", 1000);
+//			}
+//
+//			function toDub(n) {
+//				return n < 10 ? "0" + n : "" + n;
+//			};
+		var btn = document.getElementById('btn');
+		var aLi = btn.getElementsByTagName('span');
+		for(var i = 0; i < aLi.length; i++) {
+			aLi[i].index = i;
+			aLi[i].onclick = function() {
+				alert(1);
+				for(var i = 0; i < aLi.length; i++) {
+					aLi[i].className = '';
+					/*aText[i].className = '';*/
+				}
+				this.className = 'active';
+			}
+		}
+		</script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,27 @@
+.chooseCon .ref {
+	height: auto;
+}
+.chooseCon .ref ul {
+	width: 7.02rem;
+	padding: 0 0.24rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.chooseCon .ref ul li {
+	float: none;
+	margin-right: 0.36rem;
+	margin-bottom: 0.3rem;
+}
+.chooseCon .ref ul li:nth-child(4n) {
+	margin-right: 0;
+}
+.chooseCon .buyNum {
+	padding-bottom: 1.6rem;
+}
+.chooseCon .buyNum .change_num {
+	position: absolute;
+	top: 0.35rem;
+	right: 0.24rem;
+	margin-top: 0;
+}

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>预约验光师</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css" />
+	<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/header.css" />
+	<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="http://wx.bjysjglasses.com/static/wxshop/css/LArea.min.css">
+	<link rel="stylesheet" type="text/css" href="http://wx.bjysjglasses.com/static/wxshop/css/zepto.mtimer.css">
+	<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/res_infor.css" />
+	<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/layer.css">
+
+
+</head>
+<style type="text/css">
+	.timeb {
+		color: #fb8724;
+		text-align: right;
+		line-height: 0.6rem;
+		display: inline-block;
+		width: 7.26rem;
+		padding-right: 0.24rem;
+	}
+
+	.type2 {
+		margin: 0.3rem 0;
+	}
+
+	.type2 p {
+		line-height: 0.6rem;
+		margin-left: 0.24rem;
+		float: left;
+		font-size: 0.28rem;
+	}
+
+	.type2 a {
+		display: inline-block;
+		width: 1.9rem;
+		height: 0.6rem;
+		background: #fff;
+		border: 1px solid #67a9fe;
+		color: #414141;
+		font-size: 0.28rem;
+		text-align: center;
+		line-height: 0.6rem;
+		border-radius: 0.1rem;
+		margin-left: 0.66rem;
+	}
+
+	.type2 .serive2 {
+		background: #67a9fe;
+		border: 1px solid #67a9fe;
+		color: #fff;
+	}
+
+	.select {
+		border: none;
+	}
+
+	.serive9 {
+		margin-top: 2rem !important;
+	}
+</style>
+
+<body>
+	<div id="container">
+		<!-- 头部 -->
+		<header>
+			<!--<a href="Appointment_optometrist.html"><img class="back" src="http://wx.bjysjglasses.com/static/wxshop/images/head_jiantou.png" /></a>-->
+			<p class="title">预约验光师</p>
+			<!--<a class="head_car" href="car.html">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/head_car.png" />
+				</a>-->
+		</header>
+		<!--顶部结束-->
+		<img id="banner" src="http://wx.bjysjglasses.com/static/wxshop/images/yan.png" />
+		<!--切换按钮-->
+		<ul class="content_top" id="aBtn">
+			<li class="active"><b>即时</b></li>
+			<li><b>预约</b></li>
+		</ul>
+		<!--及时单-->
+		<form class="showbox" id="form1">
+			<div class="ipt name">
+				<p>您的称呼 :</p>
+				<input type="text" id="username" placeholder="请输入您的姓名" />
+			</div>
+			<div class="ipt phone">
+				<p>您的手机号 :</p>
+				<input type="text" id="userphone" placeholder="请输入手机号码" />
+			</div>
+			<div class="ipt time">
+				<p>接受服务时间 :</p>
+				<!--======-->
+				<input id="beginTime" type="text" placeholder="请选择上门时间" value="" />
+
+				<!--<input id="arrive_time" class="arrive-time" type="text" readonly style="display: none;" />-->
+				<!--<input id="endTime" class="kbtn" />-->
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/jtyou.png" />
+
+			</div>
+
+			<div class="ipt city">
+				<p>预约城市 :</p>
+				<input id="city2" type="text" readonly="" placeholder="请选择预约城市" />
+				<input id="value2" type="hidden" />
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/jtyou.png" />
+			</div>
+
+			<div class="boxCenter">
+				<!-- <div class="type">
+					<p>选择服务类型:</p>
+					<a href="javascript:;" class="serive">上门服务</a>
+					<a href="javascript:;">进店服务</a>
+				</div> -->
+				<div class="" id="shopchose1" style="position:relative;line-height:.9rem;font-size: .28rem;border-radius: .1rem;width: 7.02rem;margin:auto;height: .9rem;">
+					<p>选择商户 :</p>
+					<select id="selectshop1" style="background:#fff;position:absolute;right:0;top:-.01rem;border: 1px solid #dedede;height:.9rem;width: 3.8rem;float: right;border-radius: .1rem;">
+
+					</select>
+				</div>
+				<!-- <div class="ipt address" style="margin-top: .3rem;">
+						<p>上门地址 :</p>
+						<input type="text" id="smallcity" placeholder="请输入上门地址" />
+					</div> -->
+
+				<div class="ipt time" style="margin-top: .3rem;">
+					<p>服务内容 :</p>
+					<input id="serive" type="text" placeholder="选择服务内容" onfocus="this.blur();" />
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/jtyou.png" />
+				</div>
+				<!-- <b class="timea">服务费:¥<span>20</span></b> -->
+			</div>
+			<div class="boxCenter">
+				<div class="ipt beizhu" style="padding-top:0.2rem;margin-top:0.3rem;">
+					<p style="line-height:0.36rem;">备注(选填):</p>
+					<textarea type="text" class="texta" name="content" rows="3"></textarea>
+				</div>
+			</div>
+			<!--预约按钮-->
+			<div class="subbox">
+				<a href="javascript:;" class="submit">
+					<input type="button" value="预约" onfocus="this.blur();" id="sm" />
+				</a>
+			</div>
+		</form>
+		<!--及时单结束-->
+		<form id="form2">
+
+			<div class="ipt name">
+				<p>您的称呼 :</p>
+				<input id="name" type="text" placeholder="请输入您的姓名" />
+			</div>
+			<div class="ipt phone">
+				<p>您的手机号 :</p>
+				<input id="phone" type="text" placeholder="请输入手机号码" />
+			</div>
+			<div class="ipt time" id="time">
+				<p>接受服务时间 :</p>
+				<input id="endTime" type="text" placeholder="请选择上门时间" value="" readonly />
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/jtyou.png" />
+			</div>
+			<div class="ipt city">
+				<p>预约城市 :</p>
+				<input id="city" type="text" readonly="" placeholder="请选择预约城市" />
+				<input id="value" type="hidden" />
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/jtyou.png" />
+			</div>
+			<!-- <div class="type2">
+				<p>选择服务类型:</p>
+				<a href="javascript:;" class="serive2">上门服务</a>
+				<a href="javascript:;">进店服务</a>
+			</div> -->
+
+			<div class="ipt time">
+				<p>选择验光师 :</p>
+				<input id="choice" type="text" placeholder="选择您的验光师" onfocus="this.blur();" />
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/jtyou.png" />
+			</div>
+			<!-- <b class="timeb">服务费:¥<span>20</span></b> -->
+			<!--商户表-->
+			<!-- <div class="ipt address">
+				<p>上门地址 :</p>
+				<input id="address" type="text" placeholder="请输入上门地址" />
+			</div> -->
+			<div class="select" id="shopchose2">
+				<p>选择商户 :</p>
+				<select id="selectshop" style="background: #fff;">
+
+				</select>
+			</div>
+			<!-- <div class="select">
+				<p>选择服务项目 :</p>
+				<select id="server" style="background: #fff;">
+					<option>验光配镜</option>
+					<option>眼镜维护,</option>
+					<option>视力健康规划</option>
+					<option></option>
+				</select>
+			</div> -->
+
+			<div class="ipt time serive9" style="margin-top: .3rem;">
+				<p>服务内容 :</p>
+				<input id="serive9" type="text" placeholder="选择服务内容" onfocus="this.blur();" />
+				<img src="http://wx.bjysjglasses.com/static/wxshop/images/jtyou.png" />
+			</div>
+
+			<div class="ipt beizhu" style="padding-top:0.2rem;">
+				<p style="line-height:0.36rem;">备注(选填):</p>
+				<textarea type="text" class="texta" name="content" id="remark" rows="3">
+
+					</textarea>
+				<!--<span class="span"><i id="num">0</i>/<i id="all">100</i></span>-->
+				<!--<span class="span">还能输入<span class="num_count" id="numCount">0</span>字</span>-->
+				<!--<input id="address" type="text" placeholder="请输入上门地址" />-->
+			</div>
+
+			<div class="subbox">
+				<a href="javascript:;" class="submit" id="sub">
+					<input id="btn" type="button" value="预约验光" onfocus="this.blur();" />
+				</a>
+			</div>
+		</form>
+
+		<!--底部-->
+		<footer>
+			<a class="one" href="index.html">
+				<li class="index">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/home_check.png" />
+					<p>首页</p>
+				</li>
+			</a>
+			<a class="two" href="http://wx.bjysjglasses.com/static/wxshop/html/shop.html">
+				<li class="shop flex">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/serve.png" />
+					<p>分类</p>
+				</li>
+			</a>
+			<a class="three" href="http://wx.bjysjglasses.com/static/wxshop/html/res_infor.html">
+				<li class="res flex">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/time_check.png" />
+					<p class="active">预约验光</p>
+				</li>
+			</a>
+			<a class="four" href="main.html">
+				<li class="mine flex">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/Icon_User.png" />
+					<p>我的</p>
+				</li>
+			</a>
+		</footer>
+		<!--未选择服务类型弹框-->
+		<div class="bigbox" style="z-index:10000">
+			<div class="big_box">
+				<span class="bigboxTop">
+					服务类型选择
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/close.png" id="close" />
+				</span>
+				<span class="word">
+					<span>
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" />
+						<p></p>
+						<div class="ipttt" style="display: none;"></div>
+					</span>
+					<span>
+						<!-- <img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" /> -->
+						<!-- <p></p> -->
+					</span>
+					<span>
+						<!-- <img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" /> -->
+						<!-- <p></p> -->
+					</span>
+					<span>
+						<!-- <img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" /> -->
+						<!-- <p></p> -->
+					</span>
+					<!-- <a href="javascript:;" class="sure">确定</a> -->
+					<button type="button" class="btn btn-primary sure" data-toggle="modal" data-target="#exampleModal">确定</button>
+				</span>
+			</div>
+		</div>
+
+
+
+
+		<div class="bigbox1" style="z-index:10000">
+			<div class="big_box1">
+				<span class="bigboxTop1">
+					服务类型选择
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/close.png" id="close1" />
+				</span>
+				<span class="word1">
+					<span>
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" />
+						<p class="iptttt"></p>
+					</span>
+					<span>
+						<!-- <img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" /> -->
+						<!-- <p></p> -->
+					</span>
+					<span>
+						<!-- <img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" /> -->
+						<!-- <p></p> -->
+					</span>
+					<span>
+						<!-- <img src="http://wx.bjysjglasses.com/static/wxshop/images/z_select.png" alt="未选中" /> -->
+						<!-- <p></p> -->
+					</span>
+					<!-- <a href="javascript:;" class="sure">确定</a> -->
+					<button type="button" class="btn btn-primary sure1" data-toggle="modal" data-target="#exampleModal">确定</button>
+				</span>
+			</div>
+		</div>
+		<!--未选择类型弹框-->
+		<div class="typebox" style="z-index:10000">
+			<div class="big">
+				<span class="boxTop">
+					提示
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/close2.png" />
+				</span>
+				<span class="error">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/res.png" />
+					<p>请先选择服务类型</p>
+				</span>
+				<a href="javascript:;" class="bigs">确定</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="allmap"></div>
+	</div>
+	<div id="datePlugin"></div>
+
+
+
+	<!-- 修改数据模态框 -->
+	<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+					<h4 class="modal-title" id="exampleModalLabel">温馨提示</h4>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<li>1.如果您想购买商品后，进行预约服务，请在购买商品结算以后去”预约验光“界面预约，预约商品类型为整套商品（即：镜片+镜框），后续还会有更多预约服务，敬请期待。</li>
+						<br>
+						<li>2.所有您购买的商品发货时间为当日 早8：00-晚8：00（如有其他问题请联系客服）</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary editSuccess" data-toggle="modal" data-target="#myModal">选择商品</button>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+
+
+
+
+
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nlqmwS4x5dr1H1Q1wnHfiQ6BSOHZU3j6"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/date.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/iscroll.js"></script>
+	<script>
+		$.noConflict();
+	</script>
+
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/zepto.js"></script>
+
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/res_date.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/LArea.min.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/LAreaData2.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/footer.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/zepto.mtimer.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/right-serive.js"></script>
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/res_infor.js"></script>	
+	<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/layer.js"></script>
+
+
+
+
+	<script type="text/javascript">
+		$(function () {
+			var valav = sessionStorage.getItem('valav');
+			if (!valav) {
+				$('#serive').val('选择服务内容');
+			} else {
+				$('#serive').val(valav);
+			}
+			var account = getCookie("account");
+			$.ajax({
+				url: global + '/v1.0/bespeak/currentOrderGoodsList',
+				type: 'post',
+				dataType: 'json',
+				data: {
+					"accountId": account
+				},
+				success: function (data) {
+					console.log(data.data.length)
+					var resle = data.data.length
+					if (resle > 0) {
+						localStorage.setItem("abc", "abc");
+					}
+				}
+			});
+
+			var area1 = new LArea();
+			area1.init({
+				'trigger': '#city2',
+				'valueTo': '#value2',
+				'keys': {
+					id: 'value',
+					name: 'text'
+				},
+				'type': 2,
+				'data': [provs_data, citys_data, dists_data]
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		//		var geoProvince,geoCity,geoAddress;
+		function supportsGeoLocation() {
+			return !!navigator.geolocation;
+		}
+		// 单次位置请求执行的函数             
+		function getLocation() {
+			navigator.geolocation.getCurrentPosition(mapIt, locationError);
+		}
+		// 定位失败时，执行的函数
+		function locationError(error) {
+			switch (error.code) {
+				case error.PERMISSION_DENIED:
+					layer.msg("User denied the request for Geolocation.");
+					break;
+				case error.POSITION_UNAVAILABLE:
+					layer.msg("Location information is unavailable.");
+					break;
+				case error.TIMEOUT:
+					layer.msg("The request to get user location timed out.");
+					break;
+				case error.UNKNOWN_ERROR:
+					layer.msg("An unknown error occurred.");
+					break;
+			}
+		}
+		//定位成功时，执行的函数
+		function mapIt(position) {
+			var lon = position.coords.longitude;
+			var lat = position.coords.latitude;
+			alert("您位置的经度是：" + lon + " 纬度是：" + lat);
+			//			var map = new BMap.Map("allmap");
+			//			var point = new BMap.Point("" + lon + "", "" + lat + "");
+			//			var gc = new BMap.Geocoder();
+			//			var marker = new BMap.Marker(point);
+			//			gc.getLocation(point, function(rs) {
+			//				var addComp = rs.addressComponents;
+			//				geoProvince = addComp.province;
+			//				geoCity = addComp.city;
+			//				console.log(geoCity,addComp,geoProvince)
+			//				if(addComp.province !== addComp.city) {
+			//					geoAddress = addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber;
+			//				} else {
+			//					geoAddress = addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber;
+			//				}
+			//				$('#allmap').css('display',"none");
+			//			});
+		}
+	</script>
+	<script>
+		$(function () {
+
+
+			var productId = localStorage.getItem('ids');
+			
+			// $('#shopchose1').hide()
+			// $('#shopchose2').hide()
+
+			var userID = getCookie('userId');
+			$('#beginTime').date({
+				theme: "datetime"
+			});
+			$('#endTime').date({
+				theme: "datetime"
+			});
+			$('.type a').on('click', function () {
+				$(this).addClass('serive').siblings().removeClass('serive');
+				if ($('.serive').html() == "上门服务") {
+					// console.log('1')
+					// 	$('.timea span').html('20')
+					// 	$('.address').show();
+					// 	$('#shopchose1').hide()
+					// 	$('#serive').val('')
+				} else if ($('.serive').html() == "进店服务") {
+					console.log('2')
+					$('.timea span').html('50')
+					$('.address').hide();
+					$('#shopchose1').show();
+					$('#serive').val('')
+				}
+			})
+
+			var serive = $('#serive').val();
+			var aradius = $('.word span img');
+			var arr = [];
+			$('#serive').on('click', function () {
+				sessionStorage.removeItem('valav');
+				sessionStorage.removeItem('valav1');
+//				$('#serive').val('请选择服务内容')
+				// if ($('.type a').hasClass('serive')) {
+				$('.bigbox').show();
+
+
+				//$(this).parents().find('.word span img').on('click',function(){
+
+				// if ($('.serive').html() == "上门服务") {
+				// $('.word span:nth-child(1) p').html('眼镜清洗,')
+				// $('.word span:nth-child(2) p').html('眼镜维护,')
+				// $('.word span:nth-child(3) p').html('视力健康规划,')
+				// $('.word span:nth-child(4)').css("display",'none')
+
+				// }else if($('.serive').html()=="进店服务"){
+				$('.word span:nth-child(4)').css("display", 'block')
+				$('.word span:nth-child(1) p').html('验光配镜')
+				// $('.word span:nth-child(2) p').html('视功能检查,')
+				// $('.word span:nth-child(3) p').html('隐形眼镜评估,')
+				// $('.word span:nth-child(4) p').html('青少年近视评估,')
+				// }
+				aradius.on('click', function () {
+					//alert(1);
+					$(this).attr('src', 'http://wx.bjysjglasses.com/static/wxshop/images/z_selected.png');
+					$(this).next().addClass('inro');
+					//							var textval =$(this).parents().find('.inro').text();
+				})
+				$('.sure').on('click', function () {
+					var arr = [];
+					if($('.word p.inro').html()==undefined){
+//				if(2<1){
+						alert('请选择服务类型')
+					}else{
+					sessionStorage.setItem('valav', $('.word p.inro').html());
+					$('.bigbox').hide();
+					var textval = $(this).parents().find('.inro').text();
+					var flag = localStorage.getItem('abc');
+					if (!flag) {
+						layer.alert(
+							'规则不对，请前往购买商品',
+							{title:'温馨提示'}
+						);
+						$('#layui-layer1 .layui-layer-btn0').click(function () {
+							location.href = 'http://wx.bjysjglasses.com/static/wxshop/html/index.html';
+						})
+					} else {
+						layer.confirm(
+							'1.如果您想购买商品后，进行预约服务，请在购买商品结算以后去”预约验光“界面预约<br/>2.预约商品类型为整套商品（即：镜片+镜框），后续还会有更多预约服务，敬请期待。<br/>3.所有您购买的商品发货时间为当日 早8：00-晚8：00（如有其他问题请联系客服）',
+							{title:'温馨提示'}
+						
+						);
+//						$('#layui-layer1 .layui-layer-btn1').css({
+//							'visibility': 'hidden',
+//							'display': 'none'
+//						});
+						$('#layui-layer1 .layui-layer-btn0').click(function () {
+							location.href = './res-chose.html';
+						})
+					}
+					arr.push(textval);
+					$('#serive').val(arr);
+					}
+				})
+				// } else {
+				// 	//alert(2)
+
+				// 	$('.typebox').show();
+				// }
+
+			})
+			$('#close').on('click', function () {
+				$('.bigbox').hide();
+			})
+			$('.boxTop img').on('click', function () {
+				$('.typebox').hide();
+			})
+			$('.bigs').on('click', function () {
+				$('.typebox').hide();
+			})
+			$('#sm').click(function () {
+				var ty = $('#serive').val()
+				// var productId = localStorage.getItem('ids');
+				if(ty!="验光配镜"){
+					console.log(1)
+				}else{					
+				if (!productId) {
+					layer.alert(
+						'请选择商品',
+						{title:'温馨提示'}
+					);
+					$('#layui-layer1 .layui-layer-btn0').click(function() {
+						location.href = 'http://wx.bjysjglasses.com/static/wxshop/html/res-chose.html';
+					})
+				}
+			}
+				var shopid = $("#selectshop1 option:selected").attr('id') - 0;
+
+				var userID = getCookie('userId');
+				var username = $('#username').val();
+				var userphone = $('#userphone').val();
+				var gtime = $('#beginTime').val();
+				var bigaddress = $('#city2').val();
+				if (username == '' || userphone == '' || gtime == '' || bigaddress == '') {
+					alert('请将信息填写齐全')
+					console.log(username)
+				} else {
+					
+				}
+				var moneyy = $('.timea span').html();
+				var smalladd = $('#smallcity').val()
+				var servertype = $('.serive').html() //服务类型
+				var servercont = $('#serive').val();
+				var bespeakremake = $('.texta').val() //备注
+				var arrTime = gtime.split(' ');
+				var badd = bigaddress.split(',');
+				var date1 = arrTime[0];
+				var acc = userID;
+				var time = arrTime[1];
+				var time1 = time.split('-')[0];
+				var time2 = time.split('-')[1];
+				var stime = date1 + ' ' + time1
+				var entime = date1 + ' ' + time2
+				var pcode = badd[0]
+				var ccode = badd[1]
+				var code = badd[2]
+				if ($('.serive').html() == "上门服务") {
+					var addres = smalladd
+				} else if ($('.serive').html() == "进店服务") {
+					var addres = 123
+				}
+				var data = {
+					"userid": userID, //用户ID
+					"username": username, //用户名
+					"phone": userphone, //电话		
+					"bespeaktimestart": stime, //预约开始时间
+					"bespeaktimeend": entime, //预约结束时间
+					"pcode": pcode, //省
+					"ccode": ccode, //市
+					"code": code, //县
+					"bespeakaddress": addres, //纤细地址
+					"servicetype": "进店服务",  ////
+					"servicecontent": servercont,
+					"bespeakremake": bespeakremake,
+					"bespeakamount": 0, ////
+					"shopid": shopid,
+					"productJson":productId,
+					// 订单状态默认为-1, 表示未付款， 0表示已付款
+					"bespeakStatus":0
+				}
+				var datt = data.toString()
+				console.log(productId);
+				
+				$.ajax({
+					url: globa + "/v1.0/bespeak/addImmediateBespeak",
+					type: 'post',
+					dataType: 'json',
+					data: data,
+					success: function (data) {
+						console.log(data)
+						var aa = console.log(data.code)
+						var re = data.data;
+						var openid = getCookie('openid');
+						alert('预约成功');
+						console.log(username);
+						localStorage.clear();
+						location.href = 'http://wx.bjysjglasses.com/static/wxshop/html/index.html';
+						$.ajax({
+							type: "post",
+							url: global + "/v1.0/WXPayController/H5Pay",
+							dataType: "json",
+							async: 'true',
+							data: {
+								"vo_body": "预约订单-" + re.bespeaknumber,
+								"vo_openid": openid,
+								"vo_total_fee": re.bespeakamount,
+								"vo_out_trade_no": re.bespeaknumber,
+
+							},
+							success: function (data) {
+								console.log(474, data)
+								var res = data.data;
+								onBridgeReady(res);
+							}
+						});
+					}
+				});
+
+				function onBridgeReady(res) {
+					WeixinJSBridge.invoke(
+						'getBrandWCPayRequest', {
+							"appId": res.appId,
+							"timeStamp": res.timeStamp,
+							"nonceStr": res.nonceStr,
+							"package": res.package,
+							"signType": "MD5",
+							"paySign": res.paySign
+						},
+						function (res) {
+							if (res.err_msg == "get_brand_wcpay_request:ok") {
+								alert('支付成功!')
+								window.location.href = 'http://wx.bjysjglasses.com/static/wxshop/html/my_reservation.html?' + acc
+							} else if (res.err_msg == "total_fee") {
+								alert('支付会话标识prepay_id已失效!')
+							}
+
+						}
+					);
+				}
+				if (typeof WeixinJSBridge == "undefined") {
+					if (document.addEventListener) {
+						document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+					} else if (document.attachEvent) {
+						document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+						document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+					}
+				} else {
+					onBridgeReady();
+				}
+
+			})
+		})
+	</script>
+	<script>
+		var abtn = document.getElementById('aBtn');
+		var aLi = abtn.getElementsByTagName('li');
+		var content = document.getElementById('container');
+		var aDiv = content.getElementsByTagName('form');
+		for (var i = 0; i < aLi.length; i++) {
+			aLi[i].index = i;
+			aLi[i].onclick = function () {
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].className = '';
+					aDiv[i].className = '';
+				}
+				this.className = 'active';
+				aDiv[this.index].className = 'showbox';
+			}
+		}
+	</script>
+	<script>
+		$(function () {
+			$('#shopchose').hide()
+			$('#server option:nth-child(4)').hide()
+			var userID = getCookie('userId');
+			$('#beginTime').date({
+				theme: "datetime"
+			});
+			$('#endTime').date({
+				theme: "datetime"
+			});
+			$('.type2 a').on('click', function () {
+				// console.log('aaa')
+				$(this).addClass('serive2').siblings().removeClass('serive2');
+				// if ($('.serive2').html() == "上门服务") {
+				// $('.timeb span').html('20');
+				// $('.address').show();
+				// $('#shopchose2').hide()
+				// $('#server option:nth-child(1)').html('眼镜清洗,')
+				// $('#server option:nth-child(2)').html('眼镜维护,')
+				// $('#server option:nth-child(3)').html('视力健康规划,')
+				// $('#server option:nth-child(4)').hide()
+				// } else if ($('.serive2').html() == "进店服务") {
+				$('.timeb span').html('50')
+				$('.address').hide();
+				$('#shopchose2').show()
+				$('#server option:nth-child(4)').css("display", 'block')
+				$('#server option:nth-child(1)').html('综合验光,')
+				$('#server option:nth-child(2)').html('视功能检查,')
+				$('#server option:nth-child(3)').html('隐形眼镜评估,')
+				$('#server option:nth-child(4)').html('青少年近视评估,')
+				// }
+			})
+			var serive2 = $('#serive2').val();
+
+			var aradius = $('.word span img');
+			var arr = [];
+			$('#serive2').on('click', function () {
+				// console.log('0')
+				// if ($('.type2 a').hasClass('serive2')) {
+				// console.log('1')
+				$('.bigbox').show();
+				// if ($('.serive2').html() == "上门服务") {
+				// 	$('.word span:nth-child(1) p').html('眼镜清洗,')
+				// 	$('.word span:nth-child(2) p').html('眼镜维护,')
+				// 	$('.word span:nth-child(3) p').html('视力健康规划,')
+				// 	$('.word span:nth-child(4)').css("display", 'none')
+				// 	$('.timeb span').html('20')
+				// } else if ($('.serive2').html() == "进店服务") {
+				$('.word span:nth-child(4)').css("display", 'block')
+				$('.word span:nth-child(1) p').html('验光配镜')
+				// $('.word span:nth-child(2) p').html('视功能检查,')
+				// $('.word span:nth-child(3) p').html('隐形眼镜评估,')
+				// $('.word span:nth-child(4) p').html('青少年近视评估,')
+				// $('.timeb span').html('20')
+				// }
+				aradius.on('click', function () {
+					//alert(1);
+					$(this).attr('src', 'http://wx.bjysjglasses.com/static/wxshop/images/z_selected.png');
+					$(this).next().addClass('inro');
+				})
+				$('.sure').on('click', function () {
+					var arr = [];
+					
+					$('.bigbox').hide();
+					var textval = $(this).parents().find('.inro').text();
+					arr.push(textval);
+					$('#serive2').val(arr);
+				})
+				// } else {
+				// 	console.log('2')
+				// 	$('.typebox').show();
+				// }
+
+			})
+			$('#close').on('click', function () {
+				$('.bigbox').hide();
+			})
+			$('.boxTop img').on('click', function () {
+				$('.typebox').hide();
+			})
+			$('.bigs').on('click', function () {
+				$('.typebox').hide();
+			})
+			//				$('#sm').click(function(){
+			//					var userID = getCookie('userId');
+			//					var username = $('#username').val();
+			//					var userphone = $('#userphone').val();
+			//					var gtime = $('#beginTime').val();
+			//					var bigaddress = $('#city2').val();
+			//					var smalladd = $('#smallcity').val()
+			//					var servertype = $('.serive').html()   //服务类型
+			//					var servercont = $('#serive').val();
+			//					var bespeakremake = $('.texta').val()                   //备注
+			//					var arrTime = gtime.split(' ');
+			//					var badd = bigaddress.split(',');
+			//					var date1 = arrTime[0];
+			//					var time = arrTime[1];
+			//					var time1 = time.split('-')[0];
+			//					var time2 = time.split('-')[1];
+			//					var stime = date1+' '+time1
+			//					var entime = date1+' '+time2
+			//					var pcode = badd[0]
+			//					var ccode = badd[1]
+			//					var code = badd[2]
+			//					var data = {
+			//						"userid":userID,                 //用户ID
+			//						"username":username,       //用户名
+			//						"phone":userphone,	       //电话		
+			//						"bespeaktimestart":stime,  //预约开始时间
+			//						"bespeaktimeend":entime,   //预约结束时间
+			//						"pcode":pcode,			   //省
+			//						"ccode":ccode,             //市
+			//						"code":code,			   //县
+			//						"bespeakaddress":smalladd,  //纤细地址
+			//						"servicetype":servertype,
+			//						"servicecontent":servercont,
+			//						"bespeakremake":bespeakremake
+			//					}
+			//					var datt = data.toString()
+			//					console.log(typeof(data))
+			//					$.ajax({
+			//				//				url: global+'/v1.0/address/queryDefaultAddress',
+			//				//				url: global+'/v1.0/address/getAddressById',
+			//				url: globa + "/v1.0/bespeak/addImmediateBespeak",
+			//				type: 'post',
+			//				dataType: 'json',
+			//				data: data,
+			//				success: function(data) {
+			//					console.log(data)
+			//					var aa = console.log(data.code)
+			//					alert(data.msg)
+			//				}
+			//			});
+			//					
+			//					
+			//					
+			//				})
+		})
+	</script>
+</body>
+
+</html>

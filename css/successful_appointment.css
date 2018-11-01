@@ -1,0 +1,51 @@
+#container {
+	width: 100%;
+	height: auto;
+	padding-bottom: 1.4rem;
+}
+.box {
+	width: 100%;
+	height: 6.52rem;
+	margin-top:0.88rem;
+	position: relative;
+}
+.box img {
+	width: 100%;
+	height: 100%;
+}
+.word {
+	width: 5.06rem;
+	line-height: 0.48rem;
+	color: #727272;
+	font-size: 0.3rem;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 6.48rem;
+	margin-left: -2.53rem;
+	z-index: 99;
+}
+.back {
+	color: #727272;
+	display: block;
+	width: 7rem;
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.4rem;
+	border: 1px solid #727272;
+	border-radius: 0.2rem;
+	margin: 1.6rem auto 0.25rem;
+}
+.share {
+	background: #67a9fe;
+	color: #fff;
+	display: block;
+	margin: 0 auto;
+	height: 1.02rem;	
+	line-height: 1.02rem;
+	text-align: center;
+	font-size: 0.4rem;
+	width: 7.02rem;
+	border-radius: 0.2rem;
+}

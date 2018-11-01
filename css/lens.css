@@ -1,0 +1,212 @@
+/*header*/
+
+header {
+	width: 100%;
+	height: 0.88rem;
+}
+
+header p {
+	text-align: center;
+	line-height: 0.88rem;
+}
+
+.content {
+	width: 100%;
+	height: auto;
+}
+
+.mesu_list {
+	padding: 0.8rem;
+	border-bottom: 1px solid #ccc;
+	height: 0.6rem;
+}
+
+.list {
+	width: 100%;
+}
+
+#tab {
+	border-bottom: 0;
+}
+
+#screen_list {
+	padding-bottom: 1.9rem;
+}
+
+.items {
+	width: 100%;
+	height: auto;
+}
+
+.items h2 {
+	width: 5.92rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	font-size: 0.24rem;
+	color: #808080;
+	padding: 0 0.24rem;
+}
+
+.items ul {
+	padding: 0.2rem 0.24rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-bottom: 0;
+}
+
+.tclass{
+	width:1.5rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	font-size: 0.24rem;
+	color: #999;
+	margin-right: 0.2rem;
+	margin-bottom: 0.2rem;
+	background-color: rgba(249, 249, 249, 1);
+	border-radius: 0.3rem;
+	text-align: center;	
+	border:none;
+}
+.toclass{
+	width:1.46rem;
+	height: 0.56rem;
+	line-height: 0.56rem;
+	font-size: 0.24rem;
+	color: #999;
+	margin-right: 0.2rem;
+	margin-bottom: 0.2rem;	
+	border-radius: 0.28rem;
+	text-align: center;
+	border:1px solid red;
+}
+.items ul li.active {
+	border-radius: 0.3rem;
+	background: #67a9fe;
+	color: #fff;
+}
+
+button {
+	width: 100%;
+	height: 0.98rem;
+	background: #67a9fe;
+	font-size: 0.4rem;
+	color: #fff;
+	border: 0;
+	position: fixed;
+	bottom: 0;
+}
+
+#tab {
+	background: #fff;
+	width: 100%;
+	height: 0.6rem;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 0.1rem solid #f2f2f3;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#tab li {
+	width: 2rem;
+	height: 100%;
+	position: relative;
+}
+
+#tab li p {
+	width: 100%;
+	line-height: 0.6rem;
+	text-align: center;
+	font-size: 0.24rem;
+	color: #666;
+}
+
+#tab li p.active {
+	color: #67a9fe;
+}
+
+#tab li .up {
+	width: 0;
+	height: 0;
+	border-width: 0 0.1rem 0.1rem;
+	border-style: solid;
+	border-color: transparent transparent #444;
+	position: absolute;
+	top: 0.18rem;
+	right: 0.15rem;
+}
+
+#tab li .down {
+	width: 0;
+	height: 0;
+	border-width: 0.1rem 0.1rem 0;
+	border-style: solid;
+	border-color: #444 transparent transparent;
+	position: absolute;
+	top: 0.31rem;
+	right: 0.15rem;
+}
+/*人气排行*/
+#new_products {
+	width: 100%;
+}
+.goods_list {	
+	padding: 0 0.22rem 1.36rem 0.22rem;
+	margin-top: 0.3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.goods_list a {
+	width: 50%;
+	height: 2.17rem;
+	margin-bottom: 0.3rem;
+	-moz-box-shadow: 1px 1px 0.03rem rgba(0,0,0,.1);
+	-webkit-box-shadow: 1px 1px 0.03rem rgba(0,0,0,.1); 
+	/*box-shadow: 1px 1px 0.03rem rgba(0,0,0,.1); 
+	border-radius: 0.1rem;*/
+}
+.goods_list a li {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.goods_list a li img {
+	width: 2.6rem;
+	height: 1.72rem;
+	position: absolute;
+	top: 0.1rem;
+	left: 50%;
+	margin-left: -1.3rem;
+}
+.goods_list a li .name {
+	width: 2.66rem;
+	height: 0.22rem;
+	font-size: 0.2rem;
+	line-height: 0.22rem;
+	color: #333;
+	position: absolute;
+	bottom: 0.48rem;
+	left: 50%;
+	margin-left: -1.33rem;
+	z-index: 1;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.goods_list a li .price {
+	position: absolute;
+	left: 0.1rem;
+	bottom: 0.12rem;
+	font-size: 0.2rem;
+	color: #ff0000;
+}
+.goods_list a li .num {
+	position: absolute;
+	left: 1.65rem;
+	bottom: 0.12rem;
+	font-size: 0.2rem;
+	color: #999;
+}

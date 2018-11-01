@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>e可商城</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/common.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/header.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/footer.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" href="http://wx.bjysjglasses.com/static/wxshop/css/index.css" />
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/common.js"></script>	
+		
+	</head>
+	<style type="text/css">
+		.head_car{
+			width: 0.5rem;
+			height: 0.4rem;
+		}
+		.carico{
+			width: .5rem;
+			height: .5rem;
+			border-radius: 50%;
+			background: #FF0000;
+			display: inline-block;
+			position: absolute;
+			bottom: 0.06rem;
+			right: -.20rem;
+			font-size: .12rem;
+			transform: scale(0.6,0.6);
+		}
+		.carico i{
+			font-style: normal;
+			font-size: .2rem;
+			display: inline-block;
+			color: #fff;
+			width: .5rem;
+			height:.5rem;
+			line-height: .5rem;
+			text-align: center;
+			background: none;
+			/*transform: scale(1,1);*/
+		}
+	</style>
+	<body>
+		<div id="container">
+			<header>
+				<p class="title">e可商城</p>
+				<a class="head_car" href="car.html">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/head_car.png" />
+					<span class="carico"><i>99+</i></span>
+				</a>
+			</header>
+			<div id="banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>				
+			</div>
+			<!-- tab导航 -->
+			<ul id="tab" class="flex">
+				<a href="shop.html" style="float:right;">
+					<li>
+						<div class="com"><img src="http://wx.bjysjglasses.com/static/wxshop/images/all.png" /></div>
+						<p>全部</p>
+					</li>
+				</a>
+			</ul>
+			<div id="news">
+				<img class="news_img" src="http://wx.bjysjglasses.com/static/wxshop/images/tz.png" />
+				<ul class="line">
+					<div class="swiper-container" style="height: 100%;">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" style="height: 100%;line-height: 0.7rem;font-size: 0.22rem;">亿视界眼镜以呵护消费者眼部健康为核心</div>
+							<div class="swiper-slide" style="height: 100%;line-height: 0.7rem;font-size: 0.22rem;">让一流专业的验光师免费为您上门验光</div>
+						</div>
+					</div>
+				</ul>
+				<!--<a href="javascript:;" class="info">详情</a>-->
+			</div>
+			<!--秒杀专区结束-->
+			<!-- 新品推荐 -->
+			<div id="new_product">
+				<div class="head">
+					<h2>新品推荐</h2>
+					<a href="shop.html" class="more">
+						<p>更多</p>
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/jiantou_more.png" />
+					</a>
+				</div>
+				<!--<div class="populerImg">-->
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/ad1.png" class="popular" style="width:100%;height:3rem;"/>
+				<!--</div>-->
+				<ul class="good"></ul>
+			</div>
+			<!--秒杀专区-->
+			<div id="new_product">
+				<div class="head" style="border-bottom:none">
+					<h2>秒杀专区</h2>
+					<!--倒计时-->
+					<span class="time">
+						<em id="_h"><strong id="hour_show"></strong></em>						
+						<b>:</b>
+						<em id="_m"><strong id="minute_show">00</strong></em>						
+						<b>:</b>
+						<em id="_s"><strong id="second_show">00</strong></em>						
+					</span>
+					<!--倒计时结束-->
+					<a href="JavaScript:;" class="more">
+						<!--<p>更多</p>
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/jiantou_more.png" />-->
+					</a>
+				</div>
+				<span class="seckill">
+					<img src="http://wx.bjysjglasses.com/static/wxshop/images/miaosha.png" alt="秒杀banner" />
+				</span>
+				<p id="Pstyle" style="width:2.6rem;">
+
+				</p>
+				<ul class="seckillList">
+					<!--<li>12312313</li>
+					<li>21312313</li>-->
+					<!--<li>
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/seckillList.png" />
+						<span class="seckbox">
+							<h3>2018新款男士非格拉莫黑色圆框潮流近视眼镜</h3>							
+						
+							<span class="progress-bar" id="progress-bar">
+								<span class="progress-bar-content" id="progress-bar-content">
+									
+								</span>
+						<span class="progress-bar-left">&nbsp;已抢<b>20</b>副</span>
+						<span class="progress-bar-right">还剩<b>60%</b>&nbsp;</span>
+						</span>
+					
+						<p>¥399.00&nbsp;
+							<s>¥399.00</s>
+							<a href="javascript:;" class="rob">马上抢</a>
+						</p>
+						</span>
+					</li>		-->
+				</ul>
+			</div>
+
+			<!-- 人气推荐 -->
+			<div id="popular_goods">
+				<div class="head">
+					<h2>人气推荐</h2>
+					<a href="shop.html" class="more">
+						<p>更多</p>
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/jiantou_more.png" />
+					</a>
+				</div>
+				<!--人气图片-->
+				<div class="populerImg">
+					<img class="ad" src="http://wx.bjysjglasses.com/static/wxshop/images/ad1.png" />
+				</div>
+
+				<!--<ul class="goods"></ul>-->
+				<!--轮播-->
+				<div class="tabbox">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<!--<div class="swiper-slide">
+								<img src="http://wx.bjysjglasses.com/static/wxshop/images/person.png" class="person" />
+								<span class="sunbox">
+									<h3>2018新款男士SK黑色</h3>
+									<h3 class="aa">圆框潮流近视眼镜</h3>
+									<p>¥399.00&nbsp;</p>
+								</span>
+							</div>
+							-->
+						</div>
+						<!-- Add Pagination -->
+						<!--<div class="swiper-pagination"></div>-->
+					</div>
+				</div>
+				<!--轮播结束-->
+				<!--猜你喜欢-->
+				<div class="like">
+					<h2>猜你喜欢</h2>
+					<ul class="likeList">
+
+					</ul>
+				</div>
+				<!--猜你喜欢结束-->
+			</div>
+			<!-- footer -->
+			<footer>
+				<a class="one" href="http://wx.bjysjglasses.com/static/wxshop/html/index.html">
+					<li class="index">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/home.png" />
+						<p class="active">首页</p>
+					</li>
+				</a>
+				<a class="two" href="http://wx.bjysjglasses.com/static/wxshop/html/shop.html">
+					<li class="shop flex">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/serve.png" />
+						<p>分类</p>
+					</li>
+				</a>
+				<a class="three" href="http://wx.bjysjglasses.com/static/wxshop/html/res_infor.html">
+					<li class="res flex">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/time.png" />
+						<p>预约验光</p>
+					</li>
+				</a>
+				<a class="four" href="http://wx.bjysjglasses.com/static/wxshop/html/main.html">
+					<li class="mine flex">
+						<img src="http://wx.bjysjglasses.com/static/wxshop/images/Icon_User.png" />
+						<p>我的</p>
+					</li>
+				</a>
+			</footer>
+		</div>
+		<div id="allmap"></div>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/swiper-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nlqmwS4x5dr1H1Q1wnHfiQ6BSOHZU3j6"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/footer.js"></script>
+		<script type="text/javascript" src="http://wx.bjysjglasses.com/static/wxshop/js/index-1.js"></script>
+		<script type="text/javascript">
+
+			$(function() {
+				//timer(intDiff);
+				console.log('999')
+				console.log(aaa)
+				var mySwiper = new Swiper('.line .swiper-container', {
+					direction: 'vertical',
+					autoplay: {
+						delay: 3000,
+						stopOnLastSlide: false,
+						disableOnInteraction: false,
+					},
+					speed: 2000,
+					loop: true,
+				})
+
+				var swiper = new Swiper('#banner .swiper-container', {
+			        pagination: '.swiper-pagination',
+			        nextButton: '.swiper-button-next',
+			        prevButton: '.swiper-button-prev',
+			        slidesPerView: 1,
+			        paginationClickable: true,
+			        
+			        loop: true,
+			        
+			        centeredSlides: true,
+			        autoplay: 2500,
+			        autoplayDisableOnInteraction: false
+			    });
+
+				if(location.href.indexOf("?") >= 0) {
+					
+					console.log("aaaaa");
+					var requestParamsTemp = location.href.substring(location.href.indexOf("?") + 1);
+					if(requestParamsTemp != null) {
+						var requestParams = requestParamsTemp.split("&");
+						var openid = requestParams[1].split("=")[1];
+						var mallLoginUserToken = requestParams[0].split("=")[1];
+						var userId = requestParams[3].split("=")[1];
+						var account = requestParams[2].split("=")[1];
+						var userHead = requestParams[4].split("=")[1];    //头像
+						var nickName = requestParams[5].split("=")[1];    //nickName 昵称
+						var nickName2=unescape(nickName);
+						setCookie("openid", openid, 24 * 60 * 60);         
+						setCookie("mallLoginUser", mallLoginUserToken, 24 * 60 * 60);
+						setCookie("userId", userId, 24 * 60 * 60);
+						setCookie("account", account, 24 * 60 * 60);
+						setCookie("userHead", userHead, 24 * 60 * 60);
+						setCookie("nickName", nickName2, 24 * 60 * 60);
+					}
+				}
+				//倒计时
+				/* 倒计时 时间设置 */
+				var aaa = '10'
+				var accountttt = getCookie("account");
+					$.ajax({
+			            type: "Post",
+	            		url: glob + "/v1.0/car/getCarProd",
+			            dataType: "json",			            
+			            data:{
+			            	"account":accountttt,			            	
+						},
+						success:function(data){
+							console.log(data.data);
+							var dat = data.data
+							
+							if(dat==null){
+								console.log('105')
+								$('.carico').hide()
+							}else{ 
+								console.log('108')
+								var num = data.data.length
+								$('.carico i').text(num)			
+							}								
+						}
+				    });
+			})
+		</script>
+
+	</body>
+
+</html>
